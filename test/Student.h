@@ -14,7 +14,9 @@
 @property (assign, nonatomic) BOOL grant;
 
 - (void) sayHelloToTheTecher;
-- (void)sayHelloToTheTecherWithName;
-- (void)sayHelloWithTeacherName: (NSString*) teacherName;
+- (void) sayHelloToTheTecherWithName;
+- (void) sayHelloWithTeacherName: (NSString*) teacherName;
 - (NSString*) getHelloTextWithTeacherName: (NSString*) teacherName;
+
+
 @end

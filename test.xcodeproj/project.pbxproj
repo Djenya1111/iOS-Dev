@@ -14,6 +14,7 @@
 		18571C8C1D82DDF500397DC9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 18571C8B1D82DDF500397DC9 /* Assets.xcassets */; };
 		18571C8F1D82DDF500397DC9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18571C8D1D82DDF500397DC9 /* LaunchScreen.storyboard */; };
 		18571C981D82DEC000397DC9 /* Student.m in Sources */ = {isa = PBXBuildFile; fileRef = 18571C971D82DEC000397DC9 /* Student.m */; };
+		186A14D71D8ADC4400DA43AC /* Animal.m in Sources */ = {isa = PBXBuildFile; fileRef = 186A14D61D8ADC4400DA43AC /* Animal.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +30,8 @@
 		18571C901D82DDF500397DC9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		18571C961D82DEC000397DC9 /* Student.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Student.h; sourceTree = "<group>"; };
 		18571C971D82DEC000397DC9 /* Student.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Student.m; sourceTree = "<group>"; };
+		186A14D51D8ADC4400DA43AC /* Animal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Animal.h; sourceTree = "<group>"; };
+		186A14D61D8ADC4400DA43AC /* Animal.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Animal.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,6 +68,8 @@
 				18571C831D82DDF500397DC9 /* AppDelegate.m */,
 				18571C961D82DEC000397DC9 /* Student.h */,
 				18571C971D82DEC000397DC9 /* Student.m */,
+				186A14D51D8ADC4400DA43AC /* Animal.h */,
+				186A14D61D8ADC4400DA43AC /* Animal.m */,
 				18571C851D82DDF500397DC9 /* ViewController.h */,
 				18571C861D82DDF500397DC9 /* ViewController.m */,
 				18571C881D82DDF500397DC9 /* Main.storyboard */,
@@ -110,7 +115,7 @@
 		18571C741D82DDF500397DC9 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0730;
+				LastUpgradeCheck = 0800;
 				ORGANIZATIONNAME = IrokezDev;
 				TargetAttributes = {
 					18571C7B1D82DDF500397DC9 = {
@@ -156,6 +161,7 @@
 			files = (
 				18571C871D82DDF500397DC9 /* ViewController.m in Sources */,
 				18571C841D82DDF500397DC9 /* AppDelegate.m in Sources */,
+				186A14D71D8ADC4400DA43AC /* Animal.m in Sources */,
 				18571C811D82DDF500397DC9 /* main.m in Sources */,
 				18571C981D82DEC000397DC9 /* Student.m in Sources */,
 			);
@@ -197,8 +203,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -242,8 +250,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -308,6 +318,7 @@
 				18571C951D82DDF600397DC9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
