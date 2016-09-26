@@ -33,11 +33,24 @@
 }
 
 - (IBAction)mathAction:(UIButton *)sender {
-    if (sender.tag == 13) {
+    if (sender.tag == 10) {
+        
+    } else if (sender.tag == 11){
+        
+    } else if (sender.tag == 12){
+        
+    } else if (sender.tag == 13) {
         self.firstNumber = [self.displayLabelOutlet.text integerValue];
         self.displayLabelOutlet.text = @"";
     }
 }
+
+- (IBAction)displayClear:(id)sender {
+    
+    
+}
+
+
 
 - (void) showToDisplay:(NSInteger) number{
     NSString* numberString = [NSString stringWithFormat:@"%ld", number];
