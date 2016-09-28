@@ -15,6 +15,7 @@
 		1816C8E71D92BC3500221B27 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1816C8E51D92BC3500221B27 /* LaunchScreen.storyboard */; };
 		1816C8F01D92BE5700221B27 /* StudentsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1816C8EF1D92BE5700221B27 /* StudentsTableViewController.m */; };
 		1816C8F31D92BE7C00221B27 /* StudentTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1816C8F21D92BE7C00221B27 /* StudentTableViewCell.m */; };
+		1840805F1D9950E3006B3A42 /* StudentModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 1840805E1D9950E3006B3A42 /* StudentModel.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,8 @@
 		1816C8EF1D92BE5700221B27 /* StudentsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StudentsTableViewController.m; sourceTree = "<group>"; };
 		1816C8F11D92BE7C00221B27 /* StudentTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StudentTableViewCell.h; sourceTree = "<group>"; };
 		1816C8F21D92BE7C00221B27 /* StudentTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StudentTableViewCell.m; sourceTree = "<group>"; };
+		1840805D1D9950E3006B3A42 /* StudentModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StudentModel.h; sourceTree = "<group>"; };
+		1840805E1D9950E3006B3A42 /* StudentModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StudentModel.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,14 +67,9 @@
 		1816C8D61D92BC3500221B27 /* TableView */ = {
 			isa = PBXGroup;
 			children = (
-				1816C8DA1D92BC3500221B27 /* AppDelegate.h */,
-				1816C8DB1D92BC3500221B27 /* AppDelegate.m */,
-				1816C8DD1D92BC3500221B27 /* ViewController.h */,
-				1816C8DE1D92BC3500221B27 /* ViewController.m */,
-				1816C8EE1D92BE5700221B27 /* StudentsTableViewController.h */,
-				1816C8EF1D92BE5700221B27 /* StudentsTableViewController.m */,
-				1816C8F11D92BE7C00221B27 /* StudentTableViewCell.h */,
-				1816C8F21D92BE7C00221B27 /* StudentTableViewCell.m */,
+				184080621D995323006B3A42 /* AppDelegate */,
+				184080611D995304006B3A42 /* Model */,
+				184080601D9952F4006B3A42 /* UI */,
 				1816C8E01D92BC3500221B27 /* Main.storyboard */,
 				1816C8E31D92BC3500221B27 /* Assets.xcassets */,
 				1816C8E51D92BC3500221B27 /* LaunchScreen.storyboard */,
@@ -87,6 +85,37 @@
 				1816C8D81D92BC3500221B27 /* main.m */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		184080601D9952F4006B3A42 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				1816C8DD1D92BC3500221B27 /* ViewController.h */,
+				1816C8DE1D92BC3500221B27 /* ViewController.m */,
+				1816C8EE1D92BE5700221B27 /* StudentsTableViewController.h */,
+				1816C8EF1D92BE5700221B27 /* StudentsTableViewController.m */,
+				1816C8F11D92BE7C00221B27 /* StudentTableViewCell.h */,
+				1816C8F21D92BE7C00221B27 /* StudentTableViewCell.m */,
+			);
+			name = UI;
+			sourceTree = "<group>";
+		};
+		184080611D995304006B3A42 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				1840805D1D9950E3006B3A42 /* StudentModel.h */,
+				1840805E1D9950E3006B3A42 /* StudentModel.m */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		184080621D995323006B3A42 /* AppDelegate */ = {
+			isa = PBXGroup;
+			children = (
+				1816C8DA1D92BC3500221B27 /* AppDelegate.h */,
+				1816C8DB1D92BC3500221B27 /* AppDelegate.m */,
+			);
+			name = AppDelegate;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -161,6 +190,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1816C8DF1D92BC3500221B27 /* ViewController.m in Sources */,
+				1840805F1D9950E3006B3A42 /* StudentModel.m in Sources */,
 				1816C8F01D92BE5700221B27 /* StudentsTableViewController.m in Sources */,
 				1816C8F31D92BE7C00221B27 /* StudentTableViewCell.m in Sources */,
 				1816C8DC1D92BC3500221B27 /* AppDelegate.m in Sources */,
@@ -319,6 +349,7 @@
 				1816C8ED1D92BC3500221B27 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
