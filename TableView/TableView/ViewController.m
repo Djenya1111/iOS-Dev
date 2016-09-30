@@ -19,6 +19,9 @@
     // Do any additional setup after loading the view, typically from a nib.
 }
 
+- (IBAction)ShowJournal:(id)sender {
+    [self performSegueWithIdentifier:@"showJournalIdentifier" sender:nil];
+}
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

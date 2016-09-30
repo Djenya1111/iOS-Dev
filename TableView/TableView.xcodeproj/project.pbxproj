@@ -7,18 +7,20 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		181657981D9E79D7000C7366 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 181657971D9E79D7000C7366 /* Assets.xcassets */; };
 		1816C8D91D92BC3500221B27 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1816C8D81D92BC3500221B27 /* main.m */; };
 		1816C8DC1D92BC3500221B27 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1816C8DB1D92BC3500221B27 /* AppDelegate.m */; };
 		1816C8DF1D92BC3500221B27 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1816C8DE1D92BC3500221B27 /* ViewController.m */; };
 		1816C8E21D92BC3500221B27 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1816C8E01D92BC3500221B27 /* Main.storyboard */; };
-		1816C8E41D92BC3500221B27 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1816C8E31D92BC3500221B27 /* Assets.xcassets */; };
 		1816C8E71D92BC3500221B27 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1816C8E51D92BC3500221B27 /* LaunchScreen.storyboard */; };
 		1816C8F01D92BE5700221B27 /* StudentsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1816C8EF1D92BE5700221B27 /* StudentsTableViewController.m */; };
 		1816C8F31D92BE7C00221B27 /* StudentTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1816C8F21D92BE7C00221B27 /* StudentTableViewCell.m */; };
 		1840805F1D9950E3006B3A42 /* StudentModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 1840805E1D9950E3006B3A42 /* StudentModel.m */; };
+		189A94721D9C044300685511 /* StudentDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 189A94711D9C044300685511 /* StudentDetailViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		181657971D9E79D7000C7366 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1816C8D41D92BC3500221B27 /* TableView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TableView.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1816C8D81D92BC3500221B27 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		1816C8DA1D92BC3500221B27 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -26,7 +28,6 @@
 		1816C8DD1D92BC3500221B27 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		1816C8DE1D92BC3500221B27 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		1816C8E11D92BC3500221B27 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		1816C8E31D92BC3500221B27 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1816C8E61D92BC3500221B27 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1816C8E81D92BC3500221B27 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1816C8EE1D92BE5700221B27 /* StudentsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StudentsTableViewController.h; sourceTree = "<group>"; };
@@ -35,6 +36,8 @@
 		1816C8F21D92BE7C00221B27 /* StudentTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StudentTableViewCell.m; sourceTree = "<group>"; };
 		1840805D1D9950E3006B3A42 /* StudentModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StudentModel.h; sourceTree = "<group>"; };
 		1840805E1D9950E3006B3A42 /* StudentModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StudentModel.m; sourceTree = "<group>"; };
+		189A94701D9C044300685511 /* StudentDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StudentDetailViewController.h; sourceTree = "<group>"; };
+		189A94711D9C044300685511 /* StudentDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StudentDetailViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,7 +74,7 @@
 				184080611D995304006B3A42 /* Model */,
 				184080601D9952F4006B3A42 /* UI */,
 				1816C8E01D92BC3500221B27 /* Main.storyboard */,
-				1816C8E31D92BC3500221B27 /* Assets.xcassets */,
+				181657971D9E79D7000C7366 /* Assets.xcassets */,
 				1816C8E51D92BC3500221B27 /* LaunchScreen.storyboard */,
 				1816C8E81D92BC3500221B27 /* Info.plist */,
 				1816C8D71D92BC3500221B27 /* Supporting Files */,
@@ -96,6 +99,8 @@
 				1816C8EF1D92BE5700221B27 /* StudentsTableViewController.m */,
 				1816C8F11D92BE7C00221B27 /* StudentTableViewCell.h */,
 				1816C8F21D92BE7C00221B27 /* StudentTableViewCell.m */,
+				189A94701D9C044300685511 /* StudentDetailViewController.h */,
+				189A94711D9C044300685511 /* StudentDetailViewController.m */,
 			);
 			name = UI;
 			sourceTree = "<group>";
@@ -149,6 +154,7 @@
 				TargetAttributes = {
 					1816C8D31D92BC3500221B27 = {
 						CreatedOnToolsVersion = 8.0;
+						DevelopmentTeam = RU6B33H552;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -177,7 +183,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1816C8E71D92BC3500221B27 /* LaunchScreen.storyboard in Resources */,
-				1816C8E41D92BC3500221B27 /* Assets.xcassets in Resources */,
+				181657981D9E79D7000C7366 /* Assets.xcassets in Resources */,
 				1816C8E21D92BC3500221B27 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -193,6 +199,7 @@
 				1840805F1D9950E3006B3A42 /* StudentModel.m in Sources */,
 				1816C8F01D92BE5700221B27 /* StudentsTableViewController.m in Sources */,
 				1816C8F31D92BE7C00221B27 /* StudentTableViewCell.m in Sources */,
+				189A94721D9C044300685511 /* StudentDetailViewController.m in Sources */,
 				1816C8DC1D92BC3500221B27 /* AppDelegate.m in Sources */,
 				1816C8D91D92BC3500221B27 /* main.m in Sources */,
 			);
@@ -312,6 +319,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = RU6B33H552;
 				INFOPLIST_FILE = TableView/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.irokezdev.TableView;
@@ -323,6 +331,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = RU6B33H552;
 				INFOPLIST_FILE = TableView/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.irokezdev.TableView;

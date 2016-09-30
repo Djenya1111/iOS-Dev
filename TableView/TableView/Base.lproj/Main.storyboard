@@ -20,13 +20,16 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KyR-5V-vq8">
-                                <state key="normal" title="TableView"/>
+                                <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="21"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <state key="normal" title="ОТКРЫТЬ"/>
                                 <connections>
-                                    <segue destination="C7p-wh-w80" kind="show" id="aSm-Pc-pff"/>
+                                    <action selector="ShowJournal:" destination="BYZ-38-t0r" eventType="touchUpInside" id="bMJ-cw-1hJ"/>
+                                    <segue destination="C7p-wh-w80" kind="show" identifier="showJournalIdentifier" id="yXA-70-VWr"/>
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.0" green="0.36078431370000003" blue="0.58431372550000005" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="KyR-5V-vq8" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="136" id="27d-E7-Ze1"/>
                             <constraint firstAttribute="trailing" secondItem="KyR-5V-vq8" secondAttribute="trailing" constant="137" id="AW9-I5-zOL"/>
@@ -34,10 +37,11 @@
                             <constraint firstItem="KyR-5V-vq8" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="89" id="sMi-kc-LXy"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="sz1-TV-d0l"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-76" y="136.28185907046478"/>
+            <point key="canvasLocation" x="813.60000000000002" y="135.38230884557723"/>
         </scene>
         <!--Students Table View Controller-->
         <scene sceneID="KHk-Vq-qd6">
@@ -52,7 +56,7 @@
                                 <rect key="frame" x="0.0" y="28" width="375" height="80"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="2zo-ua-ps1" id="7ze-NP-60E">
-                                    <frame key="frameInset" width="375" height="80"/>
+                                    <frame key="frameInset" width="375" height="79"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="LastName" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sGV-VX-Hru">
@@ -89,11 +93,13 @@
                                         <constraint firstAttribute="bottom" secondItem="Gnd-UY-dSF" secondAttribute="bottom" constant="8" id="yte-VF-Bqi"/>
                                     </constraints>
                                 </tableViewCellContentView>
+                                <color key="tintColor" red="0.0" green="0.36078431370000003" blue="0.58431372550000005" alpha="1" colorSpace="calibratedRGB"/>
                                 <connections>
                                     <outlet property="studentsLastName" destination="sGV-VX-Hru" id="pi5-W0-VnP"/>
                                     <outlet property="studentsName" destination="AvT-Lr-Tp0" id="R7o-Kh-Ace"/>
                                     <outlet property="studentsPhoto" destination="Gnd-UY-dSF" id="qkb-DV-tXS"/>
                                     <outlet property="studentsSubject" destination="cUo-A0-2D5" id="iei-zy-jc8"/>
+                                    <segue destination="Ao0-Qd-sMC" kind="show" identifier="StudentDetail" id="a0z-PC-4OO"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -105,7 +111,50 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XmN-hb-BSD" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="732" y="135.38230884557723"/>
+            <point key="canvasLocation" x="1705" y="134"/>
+        </scene>
+        <!--Student Detail View Controller-->
+        <scene sceneID="UTv-dx-uPe">
+            <objects>
+                <viewController id="Ao0-Qd-sMC" customClass="StudentDetailViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="qcg-7o-y80"/>
+                        <viewControllerLayoutGuide type="bottom" id="wcs-B5-NNE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="cJu-KB-ZT8">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2X1-xE-3hH">
+                                <frame key="frameInset" minX="46" minY="131" width="134" height="86"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="20"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="XYY-YX-NqV">
+                                <frame key="frameInset" minX="188" minY="45" width="160" height="207"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5E2-Dc-TOz">
+                                <frame key="frameInset" minX="46" minY="45" width="85" height="68"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="20"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.0" green="0.36078431370000003" blue="0.58431372550000005" alpha="1" colorSpace="calibratedRGB"/>
+                    </view>
+                    <connections>
+                        <outlet property="LastName" destination="5E2-Dc-TOz" id="pHK-2O-erV"/>
+                        <outlet property="Name" destination="2X1-xE-3hH" id="Trn-Os-ogT"/>
+                        <outlet property="StudentPic" destination="XYY-YX-NqV" id="Qqa-0h-kZx"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Mua-zn-pA6" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2431.1999999999998" y="135.38230884557723"/>
         </scene>
     </scenes>
 </document>
