@@ -52,7 +52,16 @@ static NSString* const kStudentDetailIdentifier = @"StudentDetail";
     
     cell.studentsName.text = student.name;
     
+    //cell.studentsPhoto = [[[UIImageView alloc] initWithImage:indicatorImage] autorelease];
+                          
+    //UIImageView *studentsPhoto = [[UIImageView alloc] init];
     
+    cell.studentsPhoto.image = [UIImage imageNamed: student.picName];
+    
+    
+    
+    
+
     NSString* subjectString = [NSString new];
     
     for (int i = 0; i<student.subject.count; i++) {
@@ -90,6 +99,22 @@ static NSString* const kStudentDetailIdentifier = @"StudentDetail";
     }
 }
 
+- (NSDictionary*) prepareMarkWithSubjects: (NSArray*) subject{
+    NSMutableDictionary* marks = [NSMutableDictionary new];
+    
+    for (int i = 0; i < subject.count; i++) {
+        NSInteger intMark = arc4random_uniform (4) +2;
+        NSNumber* objMark = @(intMark);
+        
+        
+        [marks setValue: objMark
+                 forKey: subject[i]];
+        
+    }
+    return marks;
+    
+}
+
 - (void) prepareArrayWithStudents {
     
     NSArray* subjectArray = [NSArray new];
@@ -103,6 +128,22 @@ static NSString* const kStudentDetailIdentifier = @"StudentDetail";
     student1.age = (NSUInteger*) 25;
     student1.cours = (NSUInteger*) 1;
     student1.subject = [NSMutableArray arrayWithObjects: @"Algebra", @"Biologiya", @"Russia", nil];
+    student1.marks = [self prepareMarkWithSubjects: student1.subject];
+    student1.picName = @"batman";
+    
+    
+    //student1.studentsPhoto = [UIImageView imageNamed: @"batman"];
+    
+    //studentsPhoto.image = [UIImageView imageNamed: @"batman"];
+    
+    
+    //student1.UIImage *studentsPhoto = [UIImageView imageNamed: @"batman.png"];
+    
+    
+    
+    
+    
+    
     
     subjectArray = [NSArray arrayWithArray:student1.subject];
     
@@ -112,6 +153,8 @@ static NSString* const kStudentDetailIdentifier = @"StudentDetail";
     student2.age = (NSUInteger*) 23;
     student2.cours = (NSUInteger*) 3;
     student2.subject = [NSMutableArray arrayWithArray: subjectArray];
+    student2.marks = [self prepareMarkWithSubjects: student2.subject];
+    student2.picName = @"hulk";
     
     [student2.subject addObject: @"Geometriya"];
     
@@ -121,8 +164,13 @@ static NSString* const kStudentDetailIdentifier = @"StudentDetail";
     student3.age = (NSUInteger*) 22;
     student3.cours = (NSUInteger*) 3;
     student3.subject = [NSMutableArray arrayWithArray: subjectArray];
+    student3.marks = [self prepareMarkWithSubjects: student3.subject];
+    student3.picName = @"spider-man";
+    
     
     [student3.subject addObject: @"Fizra"];
+    
+    
     
     StudentModel* student4 = [[StudentModel alloc] initWithName: @"Denis"
                                                        lastName: @"Ten"
@@ -131,35 +179,49 @@ static NSString* const kStudentDetailIdentifier = @"StudentDetail";
                                                         subject: subjectArray];
     
     
+    student4.marks = [self prepareMarkWithSubjects: student4.subject];
+    student4.picName = @"capitan-america";
+    
     
     StudentModel* student5 = [StudentModel new];
     
     student5.name = @"Alex";
     student5.lastName = @"Han";
-    student5.age = (NSUInteger*) 23;
-    student5.cours = (NSUInteger*) 3;
+    student5.age = 23;
+    student5.cours = 3;
     student5.subject = [NSMutableArray arrayWithArray: subjectArray];
+    student5.marks = [self prepareMarkWithSubjects: student5.subject];
+    student5.picName = @"superman";
+    
     
     [student5.subject addObject: @"Himiya"];
     
     
-    StudentModel* student6 = [[StudentModel alloc] initWithName: @"Vanya"
+    StudentModel* student6 = [[StudentModel alloc]  initWithName: @"Vanya"
                                                        lastName: @"Kan"
                                                             age: 24
                                                           cours: 4
                                                         subject: subjectArray];
+    student6.marks = [self prepareMarkWithSubjects: student6.subject];
+    student6.picName = @"hellboy";
+    
     
     StudentModel* student7 = [[StudentModel alloc] initWithName: @"Bakyt"
                                                        lastName: @"Bakytov"
-                                                            age:23
-                                                          cours:3
+                                                            age: 23
+                                                          cours: 3
                                                         subject: subjectArray];
+    student7.marks = [self prepareMarkWithSubjects: student7.subject];
+    student7.picName = @"Ironman";
     
     StudentModel* student8 = [[StudentModel alloc] initWithName: @"Asan"
                                                        lastName: @"Asanov"
-                                                            age:22
-                                                          cours:2
+                                                            age: 22
+                                                          cours: 2
                                                         subject: subjectArray];
+    student8.marks = [self prepareMarkWithSubjects: student8.subject];
+    student8.picName = @"wolverine"; 
+    
     
     
     //_studentArray = [NSMutableArray new];

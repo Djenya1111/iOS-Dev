@@ -8,19 +8,21 @@
 
 #import <Foundation/Foundation.h>
 
+
 @interface StudentModel : NSObject
 
 @property (strong, nonatomic) NSString* name;
 @property (strong, nonatomic) NSString* lastName;
-@property (assign, nonatomic) NSUInteger* age;
-@property (assign, nonatomic) NSUInteger* cours;
+@property (assign, nonatomic) NSInteger* age;
+@property (assign, nonatomic) NSInteger* cours;
 @property (strong, nonatomic) NSMutableArray* subject;
 @property (strong, nonatomic) NSDictionary* marks;
+@property (strong, nonatomic) NSString* picName;
+
 
 - (instancetype)initWithName:(NSString*) name
                     lastName:(NSString*) lastname
-                         age:(NSUInteger) age
-                       cours:(NSUInteger) cours
+                         age:(NSInteger) age
+                       cours:(NSInteger) cours
                      subject:(NSArray*) subject;
-
 @end

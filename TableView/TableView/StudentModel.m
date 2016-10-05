@@ -27,18 +27,17 @@
 
 - (instancetype)initWithName:(NSString*) name
                     lastName:(NSString*) lastname
-                         age:(NSUInteger) age
-                       cours:(NSUInteger) cours
+                         age:(NSInteger) age
+                       cours:(NSInteger) cours
                      subject:(NSArray*) subject
 {
     self = [super init];
     if (self) {
         self.name = name;
         self.lastName = lastname;
-        self.age = &(age);
-        self.cours = &(cours);
-        self.subject = [NSMutableArray arrayWithArray:subject];
-        
+        self.age = age;
+        self.cours = cours;
+        self.subject = [NSMutableArray arrayWithArray:subject];    
         
         
         
