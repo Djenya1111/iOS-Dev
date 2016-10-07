@@ -14,7 +14,8 @@
 
 @property (strong, nonatomic) StudentModel* student;
 
-@property (strong, nonatomic) NSArray* subjectArray;
-@property (strong, nonatomic) NSDictionary* marks;
+//@property (strong, nonatomic) NSArray* subjectArray;
+//@property (strong, nonatomic) NSDictionary* marks;
+
 
 @end

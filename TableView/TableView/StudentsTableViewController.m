@@ -24,6 +24,8 @@ static NSString* const kStudentDetailIdentifier = @"StudentDetail";
     [super viewDidLoad];
     [self prepareArrayWithStudents];
     
+    
+    
 }
 
 
@@ -125,9 +127,9 @@ static NSString* const kStudentDetailIdentifier = @"StudentDetail";
     
     student1.name = @"Jenya";
     student1.lastName = @"Kim";
-    student1.age = (NSUInteger*) 25;
-    student1.cours = (NSUInteger*) 1;
-    student1.subject = [NSMutableArray arrayWithObjects: @"Algebra", @"Biologiya", @"Russia", nil];
+    student1.age = (long*) 25;
+    student1.cours = (long*) 1;
+    student1.subject = [NSMutableArray arrayWithObjects: @"Algebra", @"Biologiya", @"Russia", @"Fizika", @"Spanish", @"Geografiya", @"Informatika", @"Astronomiya", @"Istoriya", @"Cherchenie", @"Francuzskii",  nil];
     student1.marks = [self prepareMarkWithSubjects: student1.subject];
     student1.picName = @"batman";
     
@@ -150,25 +152,27 @@ static NSString* const kStudentDetailIdentifier = @"StudentDetail";
     
     student2.name = @"Samat";
     student2.lastName = @"Lee";
-    student2.age = (NSUInteger*) 23;
-    student2.cours = (NSUInteger*) 3;
+    student2.age = (long*) 23;
+    student2.cours = (long*) 3;
     student2.subject = [NSMutableArray arrayWithArray: subjectArray];
+    [student2.subject addObject: @"Geometriya"];
     student2.marks = [self prepareMarkWithSubjects: student2.subject];
     student2.picName = @"hulk";
     
-    [student2.subject addObject: @"Geometriya"];
+    
     
     
     student3.name = @"Andrei";
     student3.lastName = @"Pak";
-    student3.age = (NSUInteger*) 22;
-    student3.cours = (NSUInteger*) 3;
+    student3.age = (long*) 22;
+    student3.cours = (long*) 3;
     student3.subject = [NSMutableArray arrayWithArray: subjectArray];
+    [student3.subject addObject: @"Fizra"];
     student3.marks = [self prepareMarkWithSubjects: student3.subject];
     student3.picName = @"spider-man";
     
     
-    [student3.subject addObject: @"Fizra"];
+    
     
     
     
@@ -187,14 +191,15 @@ static NSString* const kStudentDetailIdentifier = @"StudentDetail";
     
     student5.name = @"Alex";
     student5.lastName = @"Han";
-    student5.age = 23;
-    student5.cours = 3;
+    student5.age = (long*) 23;
+    student5.cours = (long*) 3;
     student5.subject = [NSMutableArray arrayWithArray: subjectArray];
+    [student5.subject addObject: @"Himiya"];
     student5.marks = [self prepareMarkWithSubjects: student5.subject];
     student5.picName = @"superman";
     
     
-    [student5.subject addObject: @"Himiya"];
+    
     
     
     StudentModel* student6 = [[StudentModel alloc]  initWithName: @"Vanya"

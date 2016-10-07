@@ -8,7 +8,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Журнал-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
@@ -38,13 +38,13 @@
                             <constraint firstItem="lzL-N7-Syl" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="429" id="p0s-Cr-6Wt"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="sz1-TV-d0l"/>
+                    <navigationItem key="navigationItem" title="Журнал" id="Wvu-16-vsS"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1752.8" y="135.38230884557723"/>
         </scene>
-        <!--Students Table View Controller-->
+        <!--Студенты-->
         <scene sceneID="KHk-Vq-qd6">
             <objects>
                 <tableViewController id="C7p-wh-w80" customClass="StudentsTableViewController" sceneMemberID="viewController">
@@ -109,6 +109,9 @@
                             <outlet property="delegate" destination="C7p-wh-w80" id="EOH-04-1ym"/>
                         </connections>
                     </tableView>
+                    <navigationItem key="navigationItem" title="Студенты" id="Akk-xW-Lcy">
+                        <barButtonItem key="backBarButtonItem" title="Назад" id="VbF-TX-bjr"/>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XmN-hb-BSD" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -197,14 +200,36 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="Ipb-9L-RTp">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="subject" id="Ipb-9L-RTp" customClass="SubjectTableViewCell">
                                 <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Ipb-9L-RTp" id="DAy-dO-sZV">
-                                    <frame key="frameInset" width="375" height="44"/>
+                                    <frame key="frameInset" width="375" height="43"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Subject" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="r8w-bI-I2a">
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Mark" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vAw-cc-Jin">
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="r8w-bI-I2a" firstAttribute="centerY" secondItem="DAy-dO-sZV" secondAttribute="centerY" id="3tf-a3-lqx"/>
+                                        <constraint firstItem="vAw-cc-Jin" firstAttribute="centerY" secondItem="DAy-dO-sZV" secondAttribute="centerY" id="SbS-bp-ME2"/>
+                                        <constraint firstItem="r8w-bI-I2a" firstAttribute="centerX" secondItem="DAy-dO-sZV" secondAttribute="centerX" multiplier="0.4" id="tTP-yC-pEN"/>
+                                        <constraint firstItem="vAw-cc-Jin" firstAttribute="centerX" secondItem="DAy-dO-sZV" secondAttribute="centerX" multiplier="1.5" id="zJC-GQ-aF1"/>
+                                    </constraints>
                                 </tableViewCellContentView>
                                 <color key="backgroundColor" red="0.64325016736984253" green="0.92741554975509644" blue="0.65356022119522095" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <connections>
+                                    <outlet property="mark" destination="vAw-cc-Jin" id="yux-p7-Jy0"/>
+                                    <outlet property="subject" destination="r8w-bI-I2a" id="Mqz-Ke-vPR"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -215,7 +240,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vI9-ae-u2R" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4367" y="243"/>
+            <point key="canvasLocation" x="4365.6000000000004" y="242.42878560719643"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="ixN-Vn-soS">

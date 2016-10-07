@@ -56,8 +56,8 @@ static NSString* const kSubjectsContainer= @"subjectsContainer";
         
         detailVC.student = self.student;
         
-        detailVC.subjectArray = self.student.subject;
-        detailVC.marks = self.student.marks;
+        //detailVC.subjectArray = self.student.subject;
+        //detailVC.marks = self.student.marks;
     }
 
 }

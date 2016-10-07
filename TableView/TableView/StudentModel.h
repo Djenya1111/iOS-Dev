@@ -17,6 +17,7 @@
 @property (assign, nonatomic) NSInteger* cours;
 @property (strong, nonatomic) NSMutableArray* subject;
 @property (strong, nonatomic) NSDictionary* marks;
+
 @property (strong, nonatomic) NSString* picName;
 
 

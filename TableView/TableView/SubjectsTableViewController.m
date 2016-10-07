@@ -7,6 +7,7 @@
 //
 
 #import "SubjectsTableViewController.h"
+#import "SubjectTableViewCell.h"
 
 @interface SubjectsTableViewController ()
 
@@ -32,18 +33,25 @@
 #pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-    //#warning Incomplete implementation, return the number of sections
-    return self.subjectArray.count;
+    return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    //#warning Incomplete implementation, return the number of rows
-    return 3;
+    return self.student.subject.count;
 }
 
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:<#@"reuseIdentifier"#> forIndexPath:indexPath];
+    SubjectTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"subject"
+                                                            forIndexPath:indexPath];
+    
+    
+    NSString* subjectName = self.student.subject [indexPath.row];
+    cell.subject.text = subjectName;
+    
+    cell.mark.text = [NSString stringWithFormat: @"%@",[self.student.marks objectForKey:subjectName]];
+    
+    
     
     // Configure the cell...
     
