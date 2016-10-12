@@ -37,7 +37,7 @@
         self.lastName = lastname;
         self.age = age;
         self.cours = cours;
-        self.subject = [NSMutableArray arrayWithArray:subject];    
+        self.subject = [NSMutableArray arrayWithArray:subject];
         
         
         

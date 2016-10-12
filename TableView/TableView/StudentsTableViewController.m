@@ -33,6 +33,9 @@ static NSString* const kStudentDetailIdentifier = @"StudentDetail";
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+- (IBAction)addStudent:(id)sender {
+}
+
 
 #pragma mark - Table view data source
 
