@@ -16,6 +16,7 @@
 		1816C8F01D92BE5700221B27 /* StudentsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1816C8EF1D92BE5700221B27 /* StudentsTableViewController.m */; };
 		1816C8F31D92BE7C00221B27 /* StudentTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1816C8F21D92BE7C00221B27 /* StudentTableViewCell.m */; };
 		1840805F1D9950E3006B3A42 /* StudentModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 1840805E1D9950E3006B3A42 /* StudentModel.m */; };
+		1879AC001DAE6BF000E6D818 /* DataStorage.m in Sources */ = {isa = PBXBuildFile; fileRef = 1879ABFF1DAE6BF000E6D818 /* DataStorage.m */; };
 		189A94721D9C044300685511 /* StudentDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 189A94711D9C044300685511 /* StudentDetailViewController.m */; };
 		18E51A691DA7D24A00AFD067 /* AddStudentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18E51A681DA7D24A00AFD067 /* AddStudentViewController.m */; };
 		18EA949F1DA12B2200F9B40E /* SubjectsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18EA949E1DA12B2200F9B40E /* SubjectsTableViewController.m */; };
@@ -39,6 +40,8 @@
 		1816C8F21D92BE7C00221B27 /* StudentTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StudentTableViewCell.m; sourceTree = "<group>"; };
 		1840805D1D9950E3006B3A42 /* StudentModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StudentModel.h; sourceTree = "<group>"; };
 		1840805E1D9950E3006B3A42 /* StudentModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StudentModel.m; sourceTree = "<group>"; };
+		1879ABFE1DAE6BF000E6D818 /* DataStorage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataStorage.h; sourceTree = "<group>"; };
+		1879ABFF1DAE6BF000E6D818 /* DataStorage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataStorage.m; sourceTree = "<group>"; };
 		189A94701D9C044300685511 /* StudentDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StudentDetailViewController.h; sourceTree = "<group>"; };
 		189A94711D9C044300685511 /* StudentDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StudentDetailViewController.m; sourceTree = "<group>"; };
 		18E51A671DA7D24A00AFD067 /* AddStudentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddStudentViewController.h; sourceTree = "<group>"; };
@@ -79,6 +82,7 @@
 		1816C8D61D92BC3500221B27 /* TableView */ = {
 			isa = PBXGroup;
 			children = (
+				1879ABFD1DAE6B9F00E6D818 /* Data Storage */,
 				184080621D995323006B3A42 /* AppDelegate */,
 				184080611D995304006B3A42 /* Model */,
 				184080601D9952F4006B3A42 /* UI */,
@@ -126,6 +130,15 @@
 				1816C8DB1D92BC3500221B27 /* AppDelegate.m */,
 			);
 			name = AppDelegate;
+			sourceTree = "<group>";
+		};
+		1879ABFD1DAE6B9F00E6D818 /* Data Storage */ = {
+			isa = PBXGroup;
+			children = (
+				1879ABFE1DAE6BF000E6D818 /* DataStorage.h */,
+				1879ABFF1DAE6BF000E6D818 /* DataStorage.m */,
+			);
+			name = "Data Storage";
 			sourceTree = "<group>";
 		};
 		18E51A6A1DA7D25800AFD067 /* Add Student */ = {
@@ -246,6 +259,7 @@
 				1840805F1D9950E3006B3A42 /* StudentModel.m in Sources */,
 				18EA949F1DA12B2200F9B40E /* SubjectsTableViewController.m in Sources */,
 				18F9F7581DA52D4700D0DDCC /* SubjectTableViewCell.m in Sources */,
+				1879AC001DAE6BF000E6D818 /* DataStorage.m in Sources */,
 				1816C8F01D92BE5700221B27 /* StudentsTableViewController.m in Sources */,
 				1816C8F31D92BE7C00221B27 /* StudentTableViewCell.m in Sources */,
 				189A94721D9C044300685511 /* StudentDetailViewController.m in Sources */,

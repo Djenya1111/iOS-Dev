@@ -45,4 +45,49 @@
     return self;
 }
 
+- (nullable instancetype) initWithCoder:(NSCoder *)aDecoder{
+    self = [super init];
+    if(self){
+        self.lastName =
+        [aDecoder decodeObjectForKey: @"studentLastName"];
+        self.name =
+        [aDecoder decodeObjectForKey: @"studentName"];
+        self.age =
+        [aDecoder  decodeIntegerForKey: @"studentAge"];
+        self.cours =
+        [aDecoder decodeIntegerForKey: @"studentCours"];
+        self.subject =
+        [aDecoder decodeObjectForKey: @"studentSUbject"];
+        self.marks =
+        [aDecoder decodeObjectForKey: @"studentMarks"];
+        
+    }
+    return self;
+}
+
+//@property (strong, nonatomic) NSString* name;
+//@property (strong, nonatomic) NSString* lastName;
+//@property (assign, nonatomic) NSInteger* age;
+//@property (assign, nonatomic) NSInteger* cours;
+//@property (strong, nonatomic) NSMutableArray* subject;
+//@property (strong, nonatomic) NSDictionary* marks;
+//@property (strong, nonatomic) NSString* picName;
+
+
+- (void) encodeWithCoder:(NSCoder *)aCoder{
+    [aCoder encodeObject: self.lastName
+                  forKey: @"studentLastName"];
+    [aCoder encodeObject: self.name
+                  forKey: @"studentName"];
+    [aCoder encodeInteger: self.age
+                   forKey: @"studentAge"];
+    [aCoder encodeInteger: self.cours
+                   forKey: @"studentCours"];
+    [aCoder encodeObject: self.subject
+                  forKey: @"studentSubject"];
+    [aCoder encodeObject: self.marks
+                  forKey: @"studentMarks"];
+    
+
+}
 @end

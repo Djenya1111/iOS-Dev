@@ -9,12 +9,12 @@
 #import <Foundation/Foundation.h>
 
 
-@interface StudentModel : NSObject
+@interface StudentModel : NSObject<NSCoding>
 
 @property (strong, nonatomic) NSString* name;
 @property (strong, nonatomic) NSString* lastName;
-@property (assign, nonatomic) NSInteger* age;
-@property (assign, nonatomic) NSInteger* cours;
+@property (assign, nonatomic) NSInteger age;
+@property (assign, nonatomic) NSInteger cours;
 @property (strong, nonatomic) NSMutableArray* subject;
 @property (strong, nonatomic) NSDictionary* marks;
 

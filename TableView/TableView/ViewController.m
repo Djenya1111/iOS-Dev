@@ -17,10 +17,9 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    self.navigationController.navigationBar.tintColor = [UIColor blueColor];
-    self.navigationController.view.backgroundColor = [UIColor blueColor];
+    self.navigationController.navigationBar.tintColor = [UIColor blackColor];
+    self.navigationController.view.backgroundColor = [UIColor blackColor];
     self.navigationController.navigationBar.translucent = NO;
-    
 }
 
 - (IBAction)ShowJournal:(id)sender {

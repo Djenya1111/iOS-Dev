@@ -107,6 +107,83 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Algebra" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tfe-ih-GwO">
+                                <frame key="frameInset" minX="99" minY="402" width="60" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="59g-oi-Ab3">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="35" id="jie-Jc-sJq"/>
+                                    <constraint firstAttribute="height" constant="30" id="x4a-fF-eu7"/>
+                                </constraints>
+                                <state key="normal" image="hellboy"/>
+                                <connections>
+                                    <action selector="algebraMark:" destination="R9p-Ra-cjm" eventType="touchUpInside" id="6ua-Jm-jkf"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Russia" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5p9-us-fYt">
+                                <frame key="frameInset" minX="99" minY="453" width="50" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NQH-9X-TTe">
+                                <frame key="frameInset" minX="238" minY="449" width="35" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Mark"/>
+                                <connections>
+                                    <action selector="russiaMark:" destination="R9p-Ra-cjm" eventType="touchUpInside" id="0xo-BK-8Dn"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Fizika" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HxB-cA-xbU">
+                                <frame key="frameInset" minX="99" minY="506" width="44" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="meX-Do-YQt">
+                                <frame key="frameInset" minX="238" minY="502" width="35" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Mark"/>
+                                <connections>
+                                    <action selector="fizikaMark:" destination="R9p-Ra-cjm" eventType="touchUpInside" id="bJe-Xz-Uhf"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Spanish" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FZ6-sI-Ban">
+                                <frame key="frameInset" minX="99" minY="558" width="61" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GeF-ew-8X2">
+                                <frame key="frameInset" minX="238" minY="554" width="35" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Mark"/>
+                                <connections>
+                                    <action selector="spanishMark:" destination="R9p-Ra-cjm" eventType="touchUpInside" id="l6p-ME-ad4"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Informatika" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bo5-6U-M8O">
+                                <frame key="frameInset" minX="99" minY="607" width="86" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HC6-Lt-SR7">
+                                <frame key="frameInset" minX="238" minY="603" width="35" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Mark"/>
+                                <connections>
+                                    <action selector="informatikaMark:" destination="R9p-Ra-cjm" eventType="touchUpInside" id="OVv-EF-1wE"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -116,9 +193,11 @@
                             <constraint firstItem="b6F-0F-J8x" firstAttribute="top" secondItem="fAc-dt-13V" secondAttribute="bottom" constant="8" id="I0o-aO-1E0"/>
                             <constraint firstItem="oV4-24-tnv" firstAttribute="centerX" secondItem="Pbx-pY-IUL" secondAttribute="centerX" id="Iir-rV-mdf"/>
                             <constraint firstItem="EAH-q4-0N1" firstAttribute="centerX" secondItem="Pbx-pY-IUL" secondAttribute="centerX" id="Np3-ZN-44i"/>
+                            <constraint firstAttribute="trailing" secondItem="59g-oi-Ab3" secondAttribute="trailing" constant="104" id="QqS-uV-Hb0"/>
                             <constraint firstItem="ADW-ZS-Hta" firstAttribute="centerX" secondItem="Pbx-pY-IUL" secondAttribute="centerX" id="RET-VU-8CU"/>
                             <constraint firstItem="oV4-24-tnv" firstAttribute="top" secondItem="EAH-q4-0N1" secondAttribute="bottom" constant="8" id="Sch-3D-lBg"/>
                             <constraint firstItem="fAc-dt-13V" firstAttribute="centerX" secondItem="Pbx-pY-IUL" secondAttribute="centerX" id="TqW-Qj-kCt"/>
+                            <constraint firstItem="59g-oi-Ab3" firstAttribute="top" secondItem="CDe-D6-AP2" secondAttribute="bottom" constant="33" id="bsc-On-cE3"/>
                             <constraint firstItem="b6F-0F-J8x" firstAttribute="centerX" secondItem="Pbx-pY-IUL" secondAttribute="centerX" id="do6-eD-Jo4"/>
                             <constraint firstItem="c34-sZ-ZDU" firstAttribute="top" secondItem="oV4-24-tnv" secondAttribute="bottom" constant="15" id="faM-hI-XKX"/>
                             <constraint firstItem="EAH-q4-0N1" firstAttribute="top" secondItem="2e8-nm-zdZ" secondAttribute="bottom" constant="15" id="fiY-fC-F9l"/>
@@ -137,14 +216,19 @@
                     </navigationItem>
                     <connections>
                         <outlet property="ageField" destination="oV4-24-tnv" id="9kS-om-usO"/>
+                        <outlet property="algebraOutlet" destination="59g-oi-Ab3" id="jJk-rI-nWz"/>
                         <outlet property="coursField" destination="CDe-D6-AP2" id="j5S-uL-WsA"/>
+                        <outlet property="fizikaOutlet" destination="meX-Do-YQt" id="ovm-Q7-Fmm"/>
+                        <outlet property="informatikaOutlet" destination="HC6-Lt-SR7" id="QZ4-9R-eH6"/>
                         <outlet property="lastNameField" destination="b6F-0F-J8x" id="bqJ-aO-zOY"/>
                         <outlet property="nameField" destination="2e8-nm-zdZ" id="wYp-FT-ePO"/>
+                        <outlet property="russiaOutlet" destination="NQH-9X-TTe" id="ayq-ul-v7F"/>
+                        <outlet property="spanishOutlet" destination="GeF-ew-8X2" id="GA2-Tp-A79"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="B1z-cY-QtC" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3370" y="-582"/>
+            <point key="canvasLocation" x="3368.8000000000002" y="-583.3583208395803"/>
         </scene>
         <!--Студенты-->
         <scene sceneID="KHk-Vq-qd6">
@@ -355,9 +439,10 @@
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="xoS-9V-RS2" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Emy-PT-u0w">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="Emy-PT-u0w">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" red="0.0" green="0.59999999999999998" blue="0.80000000000000004" alpha="1" colorSpace="calibratedRGB"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
@@ -369,4 +454,7 @@
             <point key="canvasLocation" x="813.60000000000002" y="135.38230884557723"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="hellboy" width="1024" height="1024"/>
+    </resources>
 </document>

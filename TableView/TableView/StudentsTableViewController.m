@@ -10,6 +10,8 @@
 #import "StudentTableViewCell.h"
 #import "StudentModel.h"
 #import "StudentDetailViewController.h"
+#import "DataStorage.h"
+
 
 static NSString* const reuseIdentifier = @"studentCellIdentifier";
 static NSString* const kStudentDetailIdentifier = @"StudentDetail";
@@ -22,17 +24,24 @@ static NSString* const kStudentDetailIdentifier = @"StudentDetail";
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [self prepareArrayWithStudents];
+    _studentArray = [DataStorage loadJournal];
     
+    
+//    [self prepareArrayWithStudents];
     
     
 }
 
+- (void)viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:YES];
+    [self.tableView reloadData];
+    
+}
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
+
 - (IBAction)addStudent:(id)sender {
 }
 
@@ -92,6 +101,7 @@ static NSString* const kStudentDetailIdentifier = @"StudentDetail";
 //
 //}
 
+
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
     
     
@@ -130,8 +140,8 @@ static NSString* const kStudentDetailIdentifier = @"StudentDetail";
     
     student1.name = @"Jenya";
     student1.lastName = @"Kim";
-    student1.age = (long*) 25;
-    student1.cours = (long*) 1;
+    student1.age =  25;
+    student1.cours = 1;
     student1.subject = [NSMutableArray arrayWithObjects: @"Algebra", @"Biologiya", @"Russia", @"Fizika", @"Spanish", @"Geografiya", @"Informatika", @"Astronomiya", @"Istoriya", @"Cherchenie", @"Francuzskii",  nil];
     student1.marks = [self prepareMarkWithSubjects: student1.subject];
     student1.picName = @"batman";
@@ -155,8 +165,8 @@ static NSString* const kStudentDetailIdentifier = @"StudentDetail";
     
     student2.name = @"Samat";
     student2.lastName = @"Lee";
-    student2.age = (long*) 23;
-    student2.cours = (long*) 3;
+    student2.age = 23;
+    student2.cours = 3;
     student2.subject = [NSMutableArray arrayWithArray: subjectArray];
     [student2.subject addObject: @"Geometriya"];
     student2.marks = [self prepareMarkWithSubjects: student2.subject];
@@ -167,8 +177,8 @@ static NSString* const kStudentDetailIdentifier = @"StudentDetail";
     
     student3.name = @"Andrei";
     student3.lastName = @"Pak";
-    student3.age = (long*) 22;
-    student3.cours = (long*) 3;
+    student3.age = 22;
+    student3.cours = 3;
     student3.subject = [NSMutableArray arrayWithArray: subjectArray];
     [student3.subject addObject: @"Fizra"];
     student3.marks = [self prepareMarkWithSubjects: student3.subject];
@@ -194,8 +204,8 @@ static NSString* const kStudentDetailIdentifier = @"StudentDetail";
     
     student5.name = @"Alex";
     student5.lastName = @"Han";
-    student5.age = (long*) 23;
-    student5.cours = (long*) 3;
+    student5.age = 23;
+    student5.cours = 3;
     student5.subject = [NSMutableArray arrayWithArray: subjectArray];
     [student5.subject addObject: @"Himiya"];
     student5.marks = [self prepareMarkWithSubjects: student5.subject];
