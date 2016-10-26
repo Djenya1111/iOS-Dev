@@ -24,23 +24,31 @@ static NSString* const kStudentDetailIdentifier = @"StudentDetail";
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    _studentArray = [DataStorage loadJournal];
     
     
-//    [self prepareArrayWithStudents];
     
     
 }
 
 - (void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:YES];
+    [self updateJournal];
+    
+}
+
+- (void) updateJournal{
+    _studentArray = [DataStorage loadJournal];
+     [self prepareArrayWithStudents];
+
     [self.tableView reloadData];
     
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
+
 }
+
 
 - (IBAction)addStudent:(id)sender {
 }
@@ -72,7 +80,42 @@ static NSString* const kStudentDetailIdentifier = @"StudentDetail";
     
     cell.studentsPhoto.image = [UIImage imageNamed: student.picName];
     
-    
+    cell.deleteStudentsBlock = ^{
+        
+        NSLog(@"Minus Student");
+        
+        UIAlertController* alert = [UIAlertController
+                                    alertControllerWithTitle: @"Udalit"
+                                                    message: @"Udalit ili ostavit studenta"
+                                    preferredStyle: UIAlertControllerStyleAlert];
+        
+        UIAlertAction* cancel = [UIAlertAction
+                                 actionWithTitle: @"Otmenit"
+                                 style: UIAlertActionStyleCancel
+                                 handler: ^(UIAlertAction* action){
+                                     
+                                 }];
+        
+        UIAlertAction* udalit = [UIAlertAction
+                                 actionWithTitle: @"udalit"
+                                 style: UIAlertActionStyleDestructive
+                                 handler: ^(UIAlertAction* action){
+                                     
+                                     [self.studentArray removeObjectAtIndex: indexPath.row];
+                                     
+                                     [DataStorage deleteStudentWithIndex: indexPath.row];
+                                     
+                                     [self.tableView reloadData];
+                                     
+                                 
+                                 }];
+        
+        [alert addAction: cancel];
+        [alert addAction: udalit];
+        
+        [self presentViewController: alert animated: YES completion: nil];
+        
+    };
     
     
 
@@ -153,7 +196,6 @@ static NSString* const kStudentDetailIdentifier = @"StudentDetail";
     
     
     //student1.UIImage *studentsPhoto = [UIImageView imageNamed: @"batman.png"];
-    
     
     
     
@@ -243,14 +285,14 @@ static NSString* const kStudentDetailIdentifier = @"StudentDetail";
     
     
     //_studentArray = [NSMutableArray new];
-    _studentArray = [NSMutableArray arrayWithObjects: student1,
+    [_studentArray addObjectsFromArray: [NSMutableArray arrayWithObjects: student1,
                      student2,
                      student3,
                      student4,
                      student5,
                      student6,
                      student7,
-                     student8, nil];
+                     student8, nil]];
     
 }
 

@@ -120,6 +120,9 @@
     
     [DataStorage addStudentToJournal: student];
     
+    [self.navigationController popViewControllerAnimated: YES];
+    
+    
     
     
     

@@ -9,16 +9,10 @@
 #import "StudentTableViewCell.h"
 
 @implementation StudentTableViewCell
-
-- (void)awakeFromNib {
-    [super awakeFromNib];
-    // Initialization code
+- (IBAction)deleteStudent:(id)sender {
+    
+    self.deleteStudentsBlock();
 }
 
-- (void)setSelected:(BOOL)selected animated:(BOOL)animated {
-    [super setSelected:selected animated:animated];
-
-    // Configure the view for the selected state
-}
 
 @end

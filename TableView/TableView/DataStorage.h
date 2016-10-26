@@ -14,6 +14,7 @@
 
 + (void) addStudentToJournal:(StudentModel*) student;
 + (NSMutableArray*) loadJournal;
++ (void) deleteStudentWithIndex: (NSInteger) index;
 
 
 

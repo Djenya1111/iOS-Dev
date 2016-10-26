@@ -13,6 +13,8 @@
 @property (strong, nonatomic) IBOutlet UIImageView *studentsPhoto;
 @property (strong, nonatomic) IBOutlet UILabel *studentsSubject;
 @property (strong, nonatomic) IBOutlet UILabel *studentsName;
+@property (strong, nonatomic) dispatch_block_t deleteStudentsBlock;
+
 
 
 @end

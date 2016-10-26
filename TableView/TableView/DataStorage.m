@@ -40,6 +40,16 @@ static NSString* const kJournalUD = @"jornalUserDefaults";
                                               forKey:kJournalUD];
     [[NSUserDefaults standardUserDefaults] synchronize];
 }
+
+
+
++ (void) deleteStudentWithIndex:(NSInteger) index {
+    NSMutableArray* studentArray = [self loadJournal];
+    [studentArray removeObjectAtIndex: index];
+    
+    [self saveJournal:studentArray];
+        
+}
     
     @end
 
