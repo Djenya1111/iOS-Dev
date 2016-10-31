@@ -15,6 +15,8 @@
 		1816C8E71D92BC3500221B27 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1816C8E51D92BC3500221B27 /* LaunchScreen.storyboard */; };
 		1816C8F01D92BE5700221B27 /* StudentsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1816C8EF1D92BE5700221B27 /* StudentsTableViewController.m */; };
 		1816C8F31D92BE7C00221B27 /* StudentTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1816C8F21D92BE7C00221B27 /* StudentTableViewCell.m */; };
+		182E33791DC0DC0000F6AE1B /* PhotoCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 182E33781DC0DC0000F6AE1B /* PhotoCollectionViewCell.m */; };
+		182E337D1DC0DD7D00F6AE1B /* PhotoCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 182E337C1DC0DD7D00F6AE1B /* PhotoCollectionViewController.m */; };
 		1840805F1D9950E3006B3A42 /* StudentModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 1840805E1D9950E3006B3A42 /* StudentModel.m */; };
 		1879AC001DAE6BF000E6D818 /* DataStorage.m in Sources */ = {isa = PBXBuildFile; fileRef = 1879ABFF1DAE6BF000E6D818 /* DataStorage.m */; };
 		189A94721D9C044300685511 /* StudentDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 189A94711D9C044300685511 /* StudentDetailViewController.m */; };
@@ -38,6 +40,10 @@
 		1816C8EF1D92BE5700221B27 /* StudentsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StudentsTableViewController.m; sourceTree = "<group>"; };
 		1816C8F11D92BE7C00221B27 /* StudentTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StudentTableViewCell.h; sourceTree = "<group>"; };
 		1816C8F21D92BE7C00221B27 /* StudentTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StudentTableViewCell.m; sourceTree = "<group>"; };
+		182E33771DC0DC0000F6AE1B /* PhotoCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhotoCollectionViewCell.h; sourceTree = "<group>"; };
+		182E33781DC0DC0000F6AE1B /* PhotoCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PhotoCollectionViewCell.m; sourceTree = "<group>"; };
+		182E337B1DC0DD7D00F6AE1B /* PhotoCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhotoCollectionViewController.h; sourceTree = "<group>"; };
+		182E337C1DC0DD7D00F6AE1B /* PhotoCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PhotoCollectionViewController.m; sourceTree = "<group>"; };
 		1840805D1D9950E3006B3A42 /* StudentModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StudentModel.h; sourceTree = "<group>"; };
 		1840805E1D9950E3006B3A42 /* StudentModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StudentModel.m; sourceTree = "<group>"; };
 		1879ABFE1DAE6BF000E6D818 /* DataStorage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataStorage.h; sourceTree = "<group>"; };
@@ -103,11 +109,23 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		182E337A1DC0DD3900F6AE1B /* CollectionView */ = {
+			isa = PBXGroup;
+			children = (
+				182E33771DC0DC0000F6AE1B /* PhotoCollectionViewCell.h */,
+				182E33781DC0DC0000F6AE1B /* PhotoCollectionViewCell.m */,
+				182E337B1DC0DD7D00F6AE1B /* PhotoCollectionViewController.h */,
+				182E337C1DC0DD7D00F6AE1B /* PhotoCollectionViewController.m */,
+			);
+			name = CollectionView;
+			sourceTree = "<group>";
+		};
 		184080601D9952F4006B3A42 /* UI */ = {
 			isa = PBXGroup;
 			children = (
 				1816C8DD1D92BC3500221B27 /* ViewController.h */,
 				1816C8DE1D92BC3500221B27 /* ViewController.m */,
+				182E337A1DC0DD3900F6AE1B /* CollectionView */,
 				18F9F7521DA52C4000D0DDCC /* Students Table */,
 				18F9F7531DA52C7500D0DDCC /* Student Detail */,
 			);
@@ -256,11 +274,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				1816C8DF1D92BC3500221B27 /* ViewController.m in Sources */,
+				182E33791DC0DC0000F6AE1B /* PhotoCollectionViewCell.m in Sources */,
 				1840805F1D9950E3006B3A42 /* StudentModel.m in Sources */,
 				18EA949F1DA12B2200F9B40E /* SubjectsTableViewController.m in Sources */,
 				18F9F7581DA52D4700D0DDCC /* SubjectTableViewCell.m in Sources */,
 				1879AC001DAE6BF000E6D818 /* DataStorage.m in Sources */,
 				1816C8F01D92BE5700221B27 /* StudentsTableViewController.m in Sources */,
+				182E337D1DC0DD7D00F6AE1B /* PhotoCollectionViewController.m in Sources */,
 				1816C8F31D92BE7C00221B27 /* StudentTableViewCell.m in Sources */,
 				189A94721D9C044300685511 /* StudentDetailViewController.m in Sources */,
 				1816C8DC1D92BC3500221B27 /* AppDelegate.m in Sources */,

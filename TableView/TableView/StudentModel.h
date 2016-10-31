@@ -26,4 +26,22 @@
                          age:(NSInteger) age
                        cours:(NSInteger) cours
                      subject:(NSArray*) subject;
+
+-(void) addSubject:(NSString *)objects;
+-(void) removeSubject:(NSString *)objects;
+
+
+
+
+
+//-(void) addObj:(NSString*) obj;
+// {
+// [_subjectArray addObject:obj];
+// }
+// 
+// -(void) removeObj:(NSString*) obj;
+// {
+// [_array removeObject:obj];
+// }
+
 @end

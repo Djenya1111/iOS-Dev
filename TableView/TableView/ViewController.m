@@ -26,6 +26,10 @@
     [self performSegueWithIdentifier:@"showJournalIdentifier" sender:nil];
 }
 
+
+
+
+
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.

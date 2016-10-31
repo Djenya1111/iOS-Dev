@@ -16,17 +16,14 @@
 @property (strong, nonatomic) IBOutlet UITextField *nameField;
 @property (strong, nonatomic) IBOutlet UITextField *ageField;
 @property (strong, nonatomic) IBOutlet UITextField *coursField;
+
 - (IBAction)saveStudent:(id)sender;
 
 @property (assign, nonatomic) BOOL algebraSelected;
-@property (assign,nonatomic) BOOL
-    fizikaSelected;
-@property (assign, nonatomic) BOOL
-    russiaSelected;
-@property (assign, nonatomic) BOOL
-    spanishSelected;
-@property (assign, nonatomic) BOOL
-    informatikaSelected;
+@property (assign, nonatomic) BOOL fizikaSelected;
+@property (assign, nonatomic) BOOL russiaSelected;
+@property (assign, nonatomic) BOOL spanishSelected;
+@property (assign, nonatomic) BOOL informatikaSelected;
 
 
 @property (strong, nonatomic) IBOutlet UIButton *algebraOutlet;
@@ -36,6 +33,7 @@
 @property (strong, nonatomic) IBOutlet UIButton *informatikaOutlet;
 
 
+@property (strong, nonatomic) StudentModel* student;
 
 
 @end
@@ -51,9 +49,9 @@
     self.nameField.delegate = self;
     self.ageField.delegate = self;
     self.coursField.delegate = self;
-    
     [self.lastNameField becomeFirstResponder];
-    
+    self.student = [StudentModel new];
+    self.student.subject = [NSMutableArray new];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -66,25 +64,61 @@
 #pragma mark - Subject Selecting
 
 
-- (IBAction)algebraMark:(id)sender {
+- (IBAction)algebraMark:(UIButton*)sender {
     if (self.algebraSelected) {
         self.algebraSelected = NO;
-        [self.algebraOutlet setImage:[UIImage imageNamed:@"hellboy"] forState:UIControlStateNormal];
+        [self.algebraOutlet setImage:[UIImage imageNamed:@"off"] forState:UIControlStateNormal];
     }  else {
         self.algebraSelected = YES;
-        [self.algebraOutlet setImage:[UIImage imageNamed:@"hulk"] forState:UIControlStateNormal];
+        [self.student.subject addObject: sender.currentTitle];
+        [self.algebraOutlet setImage:[UIImage imageNamed:@"on"] forState:UIControlStateNormal];
     }
-}
-- (IBAction)russiaMark:(id)sender {
-}
-- (IBAction)fizikaMark:(id)sender {
-}
-- (IBAction)spanishMark:(id)sender {
-}
-- (IBAction)informatikaMark:(id)sender {
-}
-- (IBAction)biologiyaMark:(id)sender {
-}
+    }
+
+- (IBAction)russiaMark:(UIButton*)sender {
+    if (self.russiaSelected) {
+        self.russiaSelected = NO;
+        [self.russiaOutlet setImage:[UIImage imageNamed:@"off"] forState:UIControlStateNormal];
+    }   else {
+        self.russiaSelected = YES;
+        [self.student.subject addObject: sender.currentTitle];
+        [self.russiaOutlet setImage:[UIImage imageNamed:@"on"] forState:UIControlStateNormal];
+    }
+    }
+
+- (IBAction)fizikaMark:(UIButton*)sender {
+    if (self.fizikaSelected) {
+        self.fizikaSelected = NO;
+        [self.fizikaOutlet setImage:[UIImage imageNamed:@"off"] forState:UIControlStateNormal];
+    }   else {
+        self.fizikaSelected = YES;
+        [self.student.subject addObject: sender.currentTitle];
+        [self.fizikaOutlet setImage:[UIImage imageNamed:@"on"] forState:UIControlStateNormal];
+    }
+    }
+
+- (IBAction)spanishMark:(UIButton*)sender {
+    if (self.spanishSelected) {
+        self.spanishSelected = NO;
+        [self.spanishOutlet setImage:[UIImage imageNamed:@"off"] forState:UIControlStateNormal];
+    }   else {
+        self.spanishSelected = YES;
+        [self.student.subject addObject: sender.currentTitle];
+        [self.spanishOutlet setImage:[UIImage imageNamed:@"on"] forState:UIControlStateNormal];
+    }
+    }
+
+- (IBAction)informatikaMark:(UIButton*)sender {
+    if (self.informatikaSelected) {
+        self.informatikaSelected = NO;
+        [self.informatikaOutlet setImage:[UIImage imageNamed:@"off"] forState:UIControlStateNormal];
+    }   else {
+        self.informatikaSelected = YES;
+        [self.student.subject addObject: sender.currentTitle];
+        [self.informatikaOutlet setImage:[UIImage imageNamed:@"on"] forState:UIControlStateNormal];
+    }
+    }
+
 
 #pragma mark - UITextFieldDelegate
 
@@ -107,18 +141,23 @@
 }
 
 
+
+
+
 #pragma mark - Save Student
 
 
 - (IBAction)saveStudent:(id)sender {
     
-    StudentModel* student = [StudentModel new];
-    student.lastName    = self.lastNameField.text;
-    student.name        = self.nameField.text;
-    student.age         = [self.ageField.text integerValue];
-    student.cours       = [self.coursField.text integerValue];
+//    StudentModel* student = [StudentModel new];
+    self.student.lastName    = self.lastNameField.text;
+    self.student.name        = self.nameField.text;
+    self.student.age         = [self.ageField.text integerValue];
+    self.student.cours       = [self.coursField.text integerValue];
+   
+   
     
-    [DataStorage addStudentToJournal: student];
+    [DataStorage addStudentToJournal: self.student];
     
     [self.navigationController popViewControllerAnimated: YES];
     
