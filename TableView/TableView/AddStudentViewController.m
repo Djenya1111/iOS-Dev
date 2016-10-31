@@ -25,23 +25,17 @@
 @property (assign, nonatomic) BOOL spanishSelected;
 @property (assign, nonatomic) BOOL informatikaSelected;
 
-
 @property (strong, nonatomic) IBOutlet UIButton *algebraOutlet;
 @property (strong, nonatomic) IBOutlet UIButton *russiaOutlet;
 @property (strong, nonatomic) IBOutlet UIButton *fizikaOutlet;
 @property (strong, nonatomic) IBOutlet UIButton *spanishOutlet;
 @property (strong, nonatomic) IBOutlet UIButton *informatikaOutlet;
 
-
 @property (strong, nonatomic) StudentModel* student;
-
 
 @end
 
-
 @implementation AddStudentViewController
-
-
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -59,8 +53,6 @@
 }
 
 
-
-
 #pragma mark - Subject Selecting
 
 
@@ -68,59 +60,89 @@
     if (self.algebraSelected) {
         self.algebraSelected = NO;
         [self.algebraOutlet setImage:[UIImage imageNamed:@"off"] forState:UIControlStateNormal];
+        [self.student.subject removeObject: sender.currentTitle];
     }  else {
         self.algebraSelected = YES;
         [self.student.subject addObject: sender.currentTitle];
         [self.algebraOutlet setImage:[UIImage imageNamed:@"on"] forState:UIControlStateNormal];
     }
-    }
+}
 
 - (IBAction)russiaMark:(UIButton*)sender {
     if (self.russiaSelected) {
         self.russiaSelected = NO;
         [self.russiaOutlet setImage:[UIImage imageNamed:@"off"] forState:UIControlStateNormal];
+        NSUInteger index = [_student.subject indexOfObject: sender.currentTitle];
+        [self.student.subject removeObjectAtIndex: index];
     }   else {
         self.russiaSelected = YES;
         [self.student.subject addObject: sender.currentTitle];
         [self.russiaOutlet setImage:[UIImage imageNamed:@"on"] forState:UIControlStateNormal];
     }
-    }
+}
 
 - (IBAction)fizikaMark:(UIButton*)sender {
     if (self.fizikaSelected) {
         self.fizikaSelected = NO;
         [self.fizikaOutlet setImage:[UIImage imageNamed:@"off"] forState:UIControlStateNormal];
+        NSUInteger index = [_student.subject indexOfObject: sender.currentTitle];
+        [self.student.subject removeObjectAtIndex: index];
     }   else {
         self.fizikaSelected = YES;
         [self.student.subject addObject: sender.currentTitle];
         [self.fizikaOutlet setImage:[UIImage imageNamed:@"on"] forState:UIControlStateNormal];
     }
-    }
+}
 
 - (IBAction)spanishMark:(UIButton*)sender {
     if (self.spanishSelected) {
         self.spanishSelected = NO;
         [self.spanishOutlet setImage:[UIImage imageNamed:@"off"] forState:UIControlStateNormal];
+        NSUInteger index = [_student.subject indexOfObject: sender.currentTitle];
+        [self.student.subject removeObjectAtIndex: index];
     }   else {
         self.spanishSelected = YES;
         [self.student.subject addObject: sender.currentTitle];
         [self.spanishOutlet setImage:[UIImage imageNamed:@"on"] forState:UIControlStateNormal];
     }
-    }
+}
 
 - (IBAction)informatikaMark:(UIButton*)sender {
     if (self.informatikaSelected) {
         self.informatikaSelected = NO;
         [self.informatikaOutlet setImage:[UIImage imageNamed:@"off"] forState:UIControlStateNormal];
+        NSUInteger index = [_student.subject indexOfObject: sender.currentTitle];
+        [self.student.subject removeObjectAtIndex: index];
     }   else {
         self.informatikaSelected = YES;
         [self.student.subject addObject: sender.currentTitle];
         [self.informatikaOutlet setImage:[UIImage imageNamed:@"on"] forState:UIControlStateNormal];
     }
+}
+
+
+#pragma mark - Subject Mark
+
+
+- (NSDictionary*) prepareMarkWithSubjects: (NSArray*) subject{
+    NSMutableDictionary* marks = [NSMutableDictionary new];
+    
+    for (int i = 0; i < subject.count; i++) {
+        NSInteger intMark = arc4random_uniform (4) +2;
+        NSNumber* objMark = @(intMark);
+        
+        
+        [marks setValue: objMark
+                 forKey: subject[i]];
+        
     }
+    return marks;
+    
+}
 
 
 #pragma mark - UITextFieldDelegate
+
 
 - (BOOL)textFieldShouldReturn:(UITextField *)textField{
     if ([textField isEqual: self.lastNameField]) {
@@ -141,29 +163,24 @@
 }
 
 
-
-
-
 #pragma mark - Save Student
 
 
 - (IBAction)saveStudent:(id)sender {
     
-//    StudentModel* student = [StudentModel new];
+    //    StudentModel* student = [StudentModel new];
     self.student.lastName    = self.lastNameField.text;
     self.student.name        = self.nameField.text;
     self.student.age         = [self.ageField.text integerValue];
     self.student.cours       = [self.coursField.text integerValue];
-   
-   
+    self.student.marks       = [self prepareMarkWithSubjects: self.student.subject];
     
     [DataStorage addStudentToJournal: self.student];
     
     [self.navigationController popViewControllerAnimated: YES];
     
-    
-    
-    
-    
 }
+
+
+
 @end

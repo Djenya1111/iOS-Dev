@@ -198,10 +198,6 @@ static NSString* const kStudentDetailIdentifier = @"StudentDetail";
     //student1.UIImage *studentsPhoto = [UIImageView imageNamed: @"batman.png"];
     
     
-    
-    
-    
-    
     subjectArray = [NSArray arrayWithArray:student1.subject];
     
     

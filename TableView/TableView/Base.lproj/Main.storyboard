@@ -90,7 +90,7 @@
                                 <size key="customSize" width="100" height="100"/>
                                 <connections>
                                     <outlet property="studentPhoto" destination="40H-2J-AKx" id="zdK-38-Mle"/>
-                                    <segue destination="Ao0-Qd-sMC" kind="show" identifier="PicShowDetailIdentifier" id="rro-sf-7eG"/>
+                                    <segue destination="Ao0-Qd-sMC" kind="show" identifier="StudentDetail" id="rro-sf-7eG"/>
                                 </connections>
                             </collectionViewCell>
                         </cells>
@@ -554,6 +554,6 @@
         <image name="off" width="582" height="582"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="a0z-PC-4OO"/>
+        <segue reference="rro-sf-7eG"/>
     </inferredMetricsTieBreakers>
 </document>

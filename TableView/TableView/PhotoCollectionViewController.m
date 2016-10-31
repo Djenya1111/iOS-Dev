@@ -14,7 +14,7 @@
 
 
 static NSString* const reuseIdentifier = @"PicShowDetailIdentifier";
-static NSString* const PicShowDetailIdentifier = @"StudentDetail";
+static NSString* const keyPicShowDetailIdentifier = @"StudentDetail";
 
 
 @interface PhotoCollectionViewController ()
@@ -39,15 +39,24 @@ static NSString* const keyCellIdentifier = @"studentsPhotoIdentifier";
     // Dispose of any resources that can be recreated.
 }
 
-/*
-#pragma mark - Navigation
 
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
+#pragma mark - Navigation
+ 
+ 
+ 
+ - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
+ 
+ 
+ if ([segue.identifier isEqualToString:keyPicShowDetailIdentifier]) {
+ 
+ NSIndexPath *indexPath = [[self.collectionView indexPathsForSelectedItems] firstObject];
+ 
+ StudentDetailViewController* photoDetail = [segue destinationViewController];
+ photoDetail.student = _students [indexPath.row];
+ }
+ }
+
+
 
 #pragma mark <UICollectionViewDataSource>
 
@@ -75,20 +84,6 @@ static NSString* const keyCellIdentifier = @"studentsPhotoIdentifier";
 
 
 
-
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
-    
-    
-    if ([segue.identifier isEqualToString:PicShowDetailIdentifier]) {
-        
-        NSIndexPath *indexPath = [[self.collectionView indexPathsForSelectedItems] firstObject];
-        
-        StudentDetailViewController* photoDetail = [segue destinationViewController];
-        photoDetail.student = _students [indexPath.row];
-    }
-}
-
-
 -(CGSize) collectionView:(UICollectionView *) collectionView layout:(nonnull UICollectionViewLayout *)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath
 {
     int numberOfCellInRow = 3;
@@ -101,7 +96,6 @@ static NSString* const keyCellIdentifier = @"studentsPhotoIdentifier";
     return CGSizeMake(cellWith, cellHeight);
     
 }
-
 
 - (NSDictionary*) prepareMarkWithSubjects: (NSArray*) subject{
     NSMutableDictionary* marks = [NSMutableDictionary new];
