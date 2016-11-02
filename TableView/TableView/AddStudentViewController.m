@@ -9,7 +9,8 @@
 #import "AddStudentViewController.h"
 #import "DataStorage.h"
 
-@interface AddStudentViewController () <UITextFieldDelegate>
+
+@interface AddStudentViewController () <UITextFieldDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate>
 
 
 @property (strong, nonatomic) IBOutlet UITextField *lastNameField;
@@ -24,14 +25,19 @@
 @property (assign, nonatomic) BOOL russiaSelected;
 @property (assign, nonatomic) BOOL spanishSelected;
 @property (assign, nonatomic) BOOL informatikaSelected;
+@property (assign, nonatomic) BOOL astronomiyaSelected;
 
 @property (strong, nonatomic) IBOutlet UIButton *algebraOutlet;
 @property (strong, nonatomic) IBOutlet UIButton *russiaOutlet;
 @property (strong, nonatomic) IBOutlet UIButton *fizikaOutlet;
 @property (strong, nonatomic) IBOutlet UIButton *spanishOutlet;
 @property (strong, nonatomic) IBOutlet UIButton *informatikaOutlet;
+@property (strong, nonatomic) IBOutlet UIButton *astronomiyaOutlet;
+
 
 @property (strong, nonatomic) StudentModel* student;
+
+@property (strong, nonatomic) IBOutlet UIButton *changePhotoOutlet;
 
 @end
 
@@ -120,9 +126,20 @@
     }
 }
 
+- (IBAction)astronomiyaMark:(UIButton*)sender {
+    if (self.astronomiyaSelected) {
+        self.astronomiyaSelected = NO;
+        [self.astronomiyaOutlet setImage:[UIImage imageNamed:@"off"] forState:UIControlStateNormal];
+        NSUInteger index = [_student.subject indexOfObject: sender.currentTitle];
+        [self.student.subject removeObjectAtIndex: index];
+    }   else {
+        self.astronomiyaSelected = YES;
+        [self.student.subject addObject: sender.currentTitle];
+        [self.astronomiyaOutlet setImage:[UIImage imageNamed:@"on"] forState:UIControlStateNormal];
+    }
+}
 
 #pragma mark - Subject Mark
-
 
 - (NSDictionary*) prepareMarkWithSubjects: (NSArray*) subject{
     NSMutableDictionary* marks = [NSMutableDictionary new];
@@ -130,7 +147,6 @@
     for (int i = 0; i < subject.count; i++) {
         NSInteger intMark = arc4random_uniform (4) +2;
         NSNumber* objMark = @(intMark);
-        
         
         [marks setValue: objMark
                  forKey: subject[i]];
@@ -140,9 +156,7 @@
     
 }
 
-
 #pragma mark - UITextFieldDelegate
-
 
 - (BOOL)textFieldShouldReturn:(UITextField *)textField{
     if ([textField isEqual: self.lastNameField]) {
@@ -163,8 +177,40 @@
 }
 
 
-#pragma mark - Save Student
+#pragma mark - Change Photo
 
+
+- (IBAction)changePhoto:(id)sender {
+    
+    UIImagePickerController* picker = [[UIImagePickerController alloc] init];
+    
+    picker.allowsEditing = NO;
+    picker.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
+    picker.delegate = self;
+    
+    [self presentViewController: picker
+                       animated: YES
+                     completion: NULL];
+    
+}
+
+#pragma mark - UIImagePickerControllerDelegate
+
+- (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary<NSString *,id> *)info{
+    [picker dismissViewControllerAnimated:YES
+                               completion:NULL];
+    
+    UIImage* image = [info objectForKey:UIImagePickerControllerOriginalImage];
+    [self.changePhotoOutlet setBackgroundImage: image
+                                      forState: UIControlStateNormal];
+    
+}
+- (void)imagePickerControllerDidCancel:(UIImagePickerController *)picker{
+    [picker dismissViewControllerAnimated:YES
+                               completion:NULL];
+}
+
+#pragma mark - Save Student
 
 - (IBAction)saveStudent:(id)sender {
     
@@ -180,7 +226,6 @@
     [self.navigationController popViewControllerAnimated: YES];
     
 }
-
 
 
 @end
