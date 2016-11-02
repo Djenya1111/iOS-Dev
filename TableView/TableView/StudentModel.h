@@ -17,9 +17,7 @@
 @property (assign, nonatomic) NSInteger cours;
 @property (strong, nonatomic) NSMutableArray* subject;
 @property (strong, nonatomic) NSDictionary* marks;
-
-@property (strong, nonatomic) NSString* picName;
-
+@property (strong, nonatomic) NSString* photoName;
 
 - (instancetype)initWithName:(NSString*) name
                     lastName:(NSString*) lastname
@@ -27,21 +25,5 @@
                        cours:(NSInteger) cours
                      subject:(NSArray*) subject;
 
--(void) addSubject:(NSString *)objects;
--(void) removeSubject:(NSString *)objects;
-
-
-
-
-
-//-(void) addObj:(NSString*) obj;
-// {
-// [_subjectArray addObject:obj];
-// }
-// 
-// -(void) removeObj:(NSString*) obj;
-// {
-// [_array removeObject:obj];
-// }
 
 @end

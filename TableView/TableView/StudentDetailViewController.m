@@ -29,11 +29,8 @@ static NSString* const kSubjectsContainer= @"subjectsContainer";
     self.Name.text = self.student.name;
     self.LastName.text = self.student.lastName;
     self.age.text = [NSString stringWithFormat: @"%d years old", (int) self.student.age];
-    //self.age.text = [@((int)_student.age) stringValue];
     self.cours.text = [NSString stringWithFormat: @"%d cours", (int) self.student.cours];
-
-    
-    self.StudentPic.image = [UIImage imageNamed:self.student.picName];
+    self.StudentPic.image = [UIImage imageNamed:self.student.photoName];
     
 }
 
@@ -56,8 +53,6 @@ static NSString* const kSubjectsContainer= @"subjectsContainer";
         
         detailVC.student = self.student;
         
-        //detailVC.subjectArray = self.student.subject;
-        //detailVC.marks = self.student.marks;
     }
 
 }

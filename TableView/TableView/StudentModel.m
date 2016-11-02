@@ -60,7 +60,8 @@
         [aDecoder decodeObjectForKey: @"studentSubject"];
         self.marks =
         [aDecoder decodeObjectForKey: @"studentMarks"];
-        
+        self.photoName =
+        [aDecoder decodeObjectForKey: @"studentPhoto"];
     }
     return self;
 }
@@ -78,7 +79,9 @@
                   forKey: @"studentSubject"];
     [aCoder encodeObject: self.marks
                   forKey: @"studentMarks"];
-    
+    [aCoder encodeObject: self.photoName
+                  forKey: @"studentPhoto"];
+
 
 }
 @end

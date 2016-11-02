@@ -72,7 +72,7 @@ static NSString* const keyCellIdentifier = @"studentsPhotoIdentifier";
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
     PhotoCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:keyCellIdentifier forIndexPath:indexPath];
     
-    cell.studentPhoto.image = [UIImage imageNamed:self.students[indexPath.row].picName];
+    cell.studentPhoto.image = [UIImage imageNamed:self.students[indexPath.row].photoName];
     
     
     return cell;
@@ -127,7 +127,7 @@ static NSString* const keyCellIdentifier = @"studentsPhotoIdentifier";
     student1.cours = 1;
     student1.subject = [NSMutableArray arrayWithObjects: @"Algebra", @"Biologiya", @"Russia", @"Fizika", @"Spanish", @"Geografiya", @"Informatika", @"Astronomiya", @"Istoriya", @"Cherchenie", @"Francuzskii",  nil];
     student1.marks = [self prepareMarkWithSubjects: student1.subject];
-    student1.picName = @"batman";
+    student1.photoName = @"batman";
     
     
     //student1.studentsPhoto = [UIImageView imageNamed: @"batman"];
@@ -151,7 +151,7 @@ static NSString* const keyCellIdentifier = @"studentsPhotoIdentifier";
     student2.subject = [NSMutableArray arrayWithArray: subjectArray];
     [student2.subject addObject: @"Geometriya"];
     student2.marks = [self prepareMarkWithSubjects: student2.subject];
-    student2.picName = @"hulk";
+    student2.photoName = @"hulk";
     
     
     
@@ -163,7 +163,7 @@ static NSString* const keyCellIdentifier = @"studentsPhotoIdentifier";
     student3.subject = [NSMutableArray arrayWithArray: subjectArray];
     [student3.subject addObject: @"Fizra"];
     student3.marks = [self prepareMarkWithSubjects: student3.subject];
-    student3.picName = @"spider-man";
+    student3.photoName = @"spider-man";
     
     
     
@@ -178,7 +178,7 @@ static NSString* const keyCellIdentifier = @"studentsPhotoIdentifier";
     
     
     student4.marks = [self prepareMarkWithSubjects: student4.subject];
-    student4.picName = @"capitan-america";
+    student4.photoName = @"capitan-america";
     
     
     StudentModel* student5 = [StudentModel new];
@@ -190,7 +190,7 @@ static NSString* const keyCellIdentifier = @"studentsPhotoIdentifier";
     student5.subject = [NSMutableArray arrayWithArray: subjectArray];
     [student5.subject addObject: @"Himiya"];
     student5.marks = [self prepareMarkWithSubjects: student5.subject];
-    student5.picName = @"superman";
+    student5.photoName = @"superman";
     
     
     
@@ -202,7 +202,7 @@ static NSString* const keyCellIdentifier = @"studentsPhotoIdentifier";
                                                            cours: 4
                                                          subject: subjectArray];
     student6.marks = [self prepareMarkWithSubjects: student6.subject];
-    student6.picName = @"hellboy";
+    student6.photoName = @"hellboy";
     
     
     StudentModel* student7 = [[StudentModel alloc] initWithName: @"Bakyt"
@@ -211,7 +211,7 @@ static NSString* const keyCellIdentifier = @"studentsPhotoIdentifier";
                                                           cours: 3
                                                         subject: subjectArray];
     student7.marks = [self prepareMarkWithSubjects: student7.subject];
-    student7.picName = @"Ironman";
+    student7.photoName = @"Ironman";
     
     StudentModel* student8 = [[StudentModel alloc] initWithName: @"Asan"
                                                        lastName: @"Asanov"
@@ -219,7 +219,7 @@ static NSString* const keyCellIdentifier = @"studentsPhotoIdentifier";
                                                           cours: 2
                                                         subject: subjectArray];
     student8.marks = [self prepareMarkWithSubjects: student8.subject];
-    student8.picName = @"wolverine";
+    student8.photoName = @"wolverine";
     
     
     

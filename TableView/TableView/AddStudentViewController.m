@@ -9,6 +9,8 @@
 #import "AddStudentViewController.h"
 #import "DataStorage.h"
 
+#define DOCUMENTS [NSSearchPathForDirectoriesInDomains (NSDocumentDirectory, NSUserDomainMask, YES) lastObject]
+
 
 @interface AddStudentViewController () <UITextFieldDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate>
 
@@ -177,6 +179,7 @@
 }
 
 
+
 #pragma mark - Change Photo
 
 
@@ -194,6 +197,22 @@
     
 }
 
+#pragma mark - NSFileManager
+
+- (void) saveStudentPhoto:(NSData*) imageData
+                photoName:(NSString*) photoName {
+    
+    BOOL saved = [[NSFileManager defaultManager] createFileAtPath: [DOCUMENTS stringByAppendingPathComponent:photoName]
+                                            contents: imageData
+                                          attributes: nil];
+    if (saved) {
+        self.student.photoName = photoName;
+    }   else {
+        NSLog(@"__not saved");
+    }
+    
+}
+
 #pragma mark - UIImagePickerControllerDelegate
 
 - (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary<NSString *,id> *)info{
@@ -204,7 +223,15 @@
     [self.changePhotoOutlet setBackgroundImage: image
                                       forState: UIControlStateNormal];
     
+    NSURL *imagePath = [info objectForKey: UIImagePickerControllerReferenceURL];
+    NSString *imageName = [NSString new];
+    imageName = [imagePath lastPathComponent];
+    
+    [self saveStudentPhoto: UIImagePNGRepresentation(image)
+                 photoName: imageName];
+    
 }
+
 - (void)imagePickerControllerDidCancel:(UIImagePickerController *)picker{
     [picker dismissViewControllerAnimated:YES
                                completion:NULL];
@@ -226,6 +253,7 @@
     [self.navigationController popViewControllerAnimated: YES];
     
 }
+
 
 
 @end
