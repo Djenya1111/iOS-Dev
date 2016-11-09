@@ -7,8 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <SWTableViewCell.h>
+@interface StudentTableViewCell : SWTableViewCell
 
-@interface StudentTableViewCell : UITableViewCell
 @property (strong, nonatomic) IBOutlet UILabel *studentsLastName;
 @property (strong, nonatomic) IBOutlet UIImageView *studentsPhoto;
 @property (strong, nonatomic) IBOutlet UILabel *studentsSubject;

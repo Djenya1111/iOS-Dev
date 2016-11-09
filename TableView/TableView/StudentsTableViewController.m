@@ -11,13 +11,14 @@
 #import "StudentModel.h"
 #import "StudentDetailViewController.h"
 #import "DataStorage.h"
+#import <SWTableViewCell.h>
 
 #define DOCUMENTS [NSSearchPathForDirectoriesInDomains (NSDocumentDirectory, NSUserDomainMask, YES) lastObject]
 
 static NSString* const reuseIdentifier = @"studentCellIdentifier";
 static NSString* const kStudentDetailIdentifier = @"StudentDetail";
 
-@interface StudentsTableViewController ()
+@interface StudentsTableViewController ()<SWTableViewCellDelegate>
 @property (nonatomic, strong) NSMutableArray<StudentModel*>* studentArray;
 @end
 
@@ -48,9 +49,6 @@ static NSString* const kStudentDetailIdentifier = @"StudentDetail";
 }
 
 
-- (IBAction)addStudent:(id)sender {
-}
-
 
 #pragma mark - Table view data source
 
@@ -67,7 +65,10 @@ static NSString* const kStudentDetailIdentifier = @"StudentDetail";
     StudentTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:reuseIdentifier forIndexPath:indexPath];
     
     StudentModel* student = [self.studentArray objectAtIndex:indexPath.row];
-    
+    cell.leftUtilityButtons   = [self leftButtons];
+    cell.rightUtilityButtons  = [self rightButtons];
+    cell.delegate = self;
+
     cell.studentsLastName.text = student.lastName;
     
     cell.studentsName.text = student.name;
@@ -138,6 +139,81 @@ static NSString* const kStudentDetailIdentifier = @"StudentDetail";
         detailVC.student = _studentArray[indexPath.row];
     }
 }
+
+#pragma mark - Buttons
+
+- (NSArray *)rightButtons
+{
+    NSMutableArray *rightUtilityButtons = [NSMutableArray new];
+    
+    
+    
+    
+    [rightUtilityButtons sw_addUtilityButtonWithColor:
+     [UIColor colorWithRed:0.78f green:0.78f blue:0.8f alpha:1.0]
+                                                 icon:[UIImage imageNamed:@"edit_swipe"]];
+    [rightUtilityButtons sw_addUtilityButtonWithColor:
+     [UIColor colorWithRed:1.0f green:0.231f blue:0.188 alpha:1.0f]
+                                                 icon:[UIImage imageNamed:@"delete_swipe"]];
+    return rightUtilityButtons;
+}
+
+- (NSArray *)leftButtons
+{
+    NSMutableArray *leftUtilityButtons = [NSMutableArray new];
+    
+    [leftUtilityButtons sw_addUtilityButtonWithColor:
+     [UIColor colorWithRed:0.07 green:0.75f blue:0.16f alpha:1.0]
+                                                icon:[UIImage imageNamed:@"logo"]];
+    [leftUtilityButtons sw_addUtilityButtonWithColor:
+     [UIColor colorWithRed:1.0f green:1.0f blue:0.35f alpha:1.0]
+                                                icon:[UIImage imageNamed:@"logo"]];
+    [leftUtilityButtons sw_addUtilityButtonWithColor:
+     [UIColor colorWithRed:1.0f green:0.231f blue:0.188f alpha:1.0]
+                                                icon:[UIImage imageNamed:@"logo"]];
+    [leftUtilityButtons sw_addUtilityButtonWithColor:
+     [UIColor colorWithRed:0.55f green:0.27f blue:0.07f alpha:1.0]
+                                                icon:[UIImage imageNamed:@"logo"]];
+    
+    return leftUtilityButtons;
+}
+
+#pragma mark - SWTableViewDelegate
+
+- (void)swipeableTableViewCell:(SWTableViewCell *)cell didTriggerLeftUtilityButtonWithIndex:(NSInteger)index {
+    switch (index) {
+        case 0:
+            NSLog(@"check button was pressed");
+            break;
+        case 1:
+            NSLog(@"clock button was pressed");
+            break;
+        case 2:
+            NSLog(@"cross button was pressed");
+            break;
+        case 3:
+            NSLog(@"list button was pressed");
+        default:
+            break;
+    }
+}
+
+- (void)swipeableTableViewCell:(SWTableViewCell *)cell didTriggerRightUtilityButtonWithIndex:(NSInteger)index {
+    switch (index) {
+        case 0:
+            NSLog(@"More button was pressed");
+            break;
+        case 1:
+        {
+            
+            break;
+        }
+        default:
+            break;
+    }
+}
+
+
 
 //- (NSDictionary*) prepareMarkWithSubjects: (NSArray*) subject{
 //    NSMutableDictionary* marks = [NSMutableDictionary new];
