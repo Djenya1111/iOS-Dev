@@ -11,6 +11,7 @@
 #import "StudentModel.h"
 #import "PhotoCollectionViewCell.h"
 #import "StudentDetailViewController.h"
+#import "AddStudentViewController.h"
 
 
 static NSString* const reuseIdentifier = @"PicShowDetailIdentifier";
@@ -60,6 +61,8 @@ static NSString* const keyCellIdentifier = @"studentsPhotoIdentifier";
 
 #pragma mark <UICollectionViewDataSource>
 
+
+
 - (NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView {
     return 1;
 }
@@ -72,8 +75,7 @@ static NSString* const keyCellIdentifier = @"studentsPhotoIdentifier";
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
     PhotoCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:keyCellIdentifier forIndexPath:indexPath];
     
-    cell.studentPhoto.image = [UIImage imageNamed:self.students[indexPath.row].photoName];
-    
+    cell.photoName.image = [UIImage imageNamed:self.students[indexPath.row].photoName];
     
     return cell;
 }

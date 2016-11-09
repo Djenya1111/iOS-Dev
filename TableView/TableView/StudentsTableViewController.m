@@ -26,9 +26,6 @@ static NSString* const kStudentDetailIdentifier = @"StudentDetail";
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    
-    
-    
 }
 
 - (void)viewWillAppear:(BOOL)animated{
@@ -79,69 +76,56 @@ static NSString* const kStudentDetailIdentifier = @"StudentDetail";
                                                        [DOCUMENTS stringByAppendingPathComponent: student.photoName]]];
     
     cell.deleteStudentsBlock = ^{
-        
-        NSLog(@"Minus Student");
-        
-        UIAlertController* alert = [UIAlertController
-                                    alertControllerWithTitle: @"Внимание!!!"
-                                    message: @"Удалить или оставить Студента"
-                                    preferredStyle: UIAlertControllerStyleAlert];
-        
-        UIAlertAction* cancel = [UIAlertAction
-                                 actionWithTitle: @"Отменить"
-                                 style: UIAlertActionStyleCancel
-                                 handler: ^(UIAlertAction* action){
-                                     
-                                 }];
-        
-        UIAlertAction* udalit = [UIAlertAction
-                                 actionWithTitle: @"Удалить"
-                                 style: UIAlertActionStyleDestructive
-                                 handler: ^(UIAlertAction* action){
-                                     
-                                     [self.studentArray removeObjectAtIndex: indexPath.row];
-                                     
-                                     [DataStorage deleteStudentWithIndex: indexPath.row];
-                                     
-                                     [self.tableView reloadData];
-                                     
-                                     
-                                 }];
-        
-        [alert addAction: cancel];
-        [alert addAction: udalit];
-        
-        [self presentViewController: alert animated: YES completion: nil];
-        
+        [self deleteStudentAtIndex:indexPath.row];
     };
-    
-    
     
     NSString* subjectString = [NSString new];
     
     for (int i = 0; i<student.subject.count; i++) {
         subjectString = [[student.subject valueForKey: @"description"] componentsJoinedByString: @" - "];
-        //subjectString = [NSString stringWithFormat: @"%@, %@", subjectString, student, subjectString[i]];
-        //subjectString = [subjectString stringByAppendingString: student.subject [i]];
+        
     }
+    
     cell.studentsSubject.text = subjectString;
-    
-    
-    
-    
     
     
     return cell;
 }
 
-//- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
-//
-//    [self performSegueWithIdentifier:kStudentDetailIdentifier
-//                              sender:[_studentArray objectAtIndex:indexPath.row]];
-//
-//
-//}
-
+- (void) deleteStudentAtIndex: (NSInteger) index {
+    
+    UIAlertController* alert = [UIAlertController
+                                alertControllerWithTitle: @"Внимание!!!"
+                                message: @"Удалить или оставить Студента"
+                                preferredStyle: UIAlertControllerStyleAlert];
+    
+    UIAlertAction* cancel = [UIAlertAction
+                             actionWithTitle: @"Отменить"
+                             style: UIAlertActionStyleCancel
+                             handler: ^(UIAlertAction* action){
+                                 
+                             }];
+    
+    UIAlertAction* udalit = [UIAlertAction
+                             actionWithTitle: @"Удалить"
+                             style: UIAlertActionStyleDestructive
+                             handler: ^(UIAlertAction* action){
+                                 
+                                 [self.studentArray removeObjectAtIndex: index];
+                                 
+                                 [DataStorage deleteStudentWithIndex: index];
+                                 
+                                 [self.tableView reloadData];
+                                 
+                                 
+                             }];
+    
+    [alert addAction: cancel];
+    [alert addAction: udalit];
+    
+    [self presentViewController: alert animated: YES completion: nil];
+    
+}
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
     
