@@ -3,4 +3,6 @@
 
 target 'TableView' do
   pod 'MGSwipeTableCell'
+  pod 'SWTableViewCell', '~> 0.3.7'
+
 end
