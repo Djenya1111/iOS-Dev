@@ -7,9 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1807B1191DEC674100BDD5AE /* ServicesTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1807B1181DEC674100BDD5AE /* ServicesTableViewController.m */; };
 		187E549D1DEC603300FACD0D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 187E549C1DEC603300FACD0D /* main.m */; };
 		187E54A01DEC603300FACD0D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 187E549F1DEC603300FACD0D /* AppDelegate.m */; };
-		187E54A31DEC603300FACD0D /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 187E54A21DEC603300FACD0D /* ViewController.m */; };
 		187E54A61DEC603300FACD0D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 187E54A41DEC603300FACD0D /* Main.storyboard */; };
 		187E54A81DEC603300FACD0D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 187E54A71DEC603300FACD0D /* Assets.xcassets */; };
 		187E54AB1DEC603300FACD0D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 187E54A91DEC603300FACD0D /* LaunchScreen.storyboard */; };
@@ -17,12 +17,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1807B1171DEC674100BDD5AE /* ServicesTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ServicesTableViewController.h; sourceTree = "<group>"; };
+		1807B1181DEC674100BDD5AE /* ServicesTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ServicesTableViewController.m; sourceTree = "<group>"; };
 		187E54981DEC603300FACD0D /* Services.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Services.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		187E549C1DEC603300FACD0D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		187E549E1DEC603300FACD0D /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		187E549F1DEC603300FACD0D /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		187E54A11DEC603300FACD0D /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		187E54A21DEC603300FACD0D /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		187E54A51DEC603300FACD0D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		187E54A71DEC603300FACD0D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		187E54AA1DEC603300FACD0D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -44,6 +44,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1807B1161DEC66E500BDD5AE /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				1807B1171DEC674100BDD5AE /* ServicesTableViewController.h */,
+				1807B1181DEC674100BDD5AE /* ServicesTableViewController.m */,
+			);
+			name = UI;
+			sourceTree = "<group>";
+		};
 		187E548F1DEC603200FACD0D = {
 			isa = PBXGroup;
 			children = (
@@ -66,9 +75,8 @@
 			isa = PBXGroup;
 			children = (
 				187E54B21DEC611900FACD0D /* Models */,
-				187E54B31DEC613500FACD0D /* Delegate */,
-				187E54A11DEC603300FACD0D /* ViewController.h */,
-				187E54A21DEC603300FACD0D /* ViewController.m */,
+				1807B1161DEC66E500BDD5AE /* UI */,
+				187E54B31DEC613500FACD0D /* AppDelegate */,
 				187E54A41DEC603300FACD0D /* Main.storyboard */,
 				187E54A71DEC603300FACD0D /* Assets.xcassets */,
 				187E54A91DEC603300FACD0D /* LaunchScreen.storyboard */,
@@ -93,13 +101,13 @@
 			name = Models;
 			sourceTree = "<group>";
 		};
-		187E54B31DEC613500FACD0D /* Delegate */ = {
+		187E54B31DEC613500FACD0D /* AppDelegate */ = {
 			isa = PBXGroup;
 			children = (
 				187E549E1DEC603300FACD0D /* AppDelegate.h */,
 				187E549F1DEC603300FACD0D /* AppDelegate.m */,
 			);
-			name = Delegate;
+			name = AppDelegate;
 			sourceTree = "<group>";
 		};
 		7BAB46DAB2D0EFC58600EAF6 /* Pods */ = {
@@ -232,7 +240,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run \'pod install\' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -242,9 +250,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				187E54A31DEC603300FACD0D /* ViewController.m in Sources */,
 				187E54A01DEC603300FACD0D /* AppDelegate.m in Sources */,
 				187E549D1DEC603300FACD0D /* main.m in Sources */,
+				1807B1191DEC674100BDD5AE /* ServicesTableViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -403,6 +411,7 @@
 				187E54B11DEC603300FACD0D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
