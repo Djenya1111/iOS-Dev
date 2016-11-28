@@ -58,8 +58,8 @@
 		187E549A1DEC603300FACD0D /* Services */ = {
 			isa = PBXGroup;
 			children = (
-				187E549E1DEC603300FACD0D /* AppDelegate.h */,
-				187E549F1DEC603300FACD0D /* AppDelegate.m */,
+				187E54B21DEC611900FACD0D /* Models */,
+				187E54B31DEC613500FACD0D /* Delegate */,
 				187E54A11DEC603300FACD0D /* ViewController.h */,
 				187E54A21DEC603300FACD0D /* ViewController.m */,
 				187E54A41DEC603300FACD0D /* Main.storyboard */,
@@ -77,6 +77,22 @@
 				187E549C1DEC603300FACD0D /* main.m */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		187E54B21DEC611900FACD0D /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		187E54B31DEC613500FACD0D /* Delegate */ = {
+			isa = PBXGroup;
+			children = (
+				187E549E1DEC603300FACD0D /* AppDelegate.h */,
+				187E549F1DEC603300FACD0D /* AppDelegate.m */,
+			);
+			name = Delegate;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
