@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  ServicesTableViewController.h
 //  Services
 //
 //  Created by Istore on 28.11.16.
@@ -8,8 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
-
+@interface ServicesTableViewController : UITableViewController
 
 @end
-
