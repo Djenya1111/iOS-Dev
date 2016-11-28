@@ -13,6 +13,8 @@
 		187E54A61DEC603300FACD0D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 187E54A41DEC603300FACD0D /* Main.storyboard */; };
 		187E54A81DEC603300FACD0D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 187E54A71DEC603300FACD0D /* Assets.xcassets */; };
 		187E54AB1DEC603300FACD0D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 187E54A91DEC603300FACD0D /* LaunchScreen.storyboard */; };
+		2E93756A1DEC698000046CA7 /* ServiceModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E9375691DEC698000046CA7 /* ServiceModel.m */; };
+		2E93756E1DEC6B8E00046CA7 /* APIClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E93756D1DEC6B8E00046CA7 /* APIClient.m */; };
 		6C033F19993E31D545EC3E12 /* libPods-Services.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F56B1105BD72977D79F07F7B /* libPods-Services.a */; };
 /* End PBXBuildFile section */
 
@@ -27,6 +29,10 @@
 		187E54A71DEC603300FACD0D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		187E54AA1DEC603300FACD0D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		187E54AC1DEC603300FACD0D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2E9375681DEC698000046CA7 /* ServiceModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ServiceModel.h; sourceTree = "<group>"; };
+		2E9375691DEC698000046CA7 /* ServiceModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ServiceModel.m; sourceTree = "<group>"; };
+		2E93756C1DEC6B8E00046CA7 /* APIClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APIClient.h; sourceTree = "<group>"; };
+		2E93756D1DEC6B8E00046CA7 /* APIClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = APIClient.m; sourceTree = "<group>"; };
 		30487432D8347CB3AA320C28 /* Pods-Services.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Services.release.xcconfig"; path = "Pods/Target Support Files/Pods-Services/Pods-Services.release.xcconfig"; sourceTree = "<group>"; };
 		E0F04B19B1F8D8CADB1BD06A /* Pods-Services.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Services.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Services/Pods-Services.debug.xcconfig"; sourceTree = "<group>"; };
 		F56B1105BD72977D79F07F7B /* libPods-Services.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Services.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -74,6 +80,7 @@
 		187E549A1DEC603300FACD0D /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				2E93756B1DEC6B1600046CA7 /* API */,
 				187E54B21DEC611900FACD0D /* Models */,
 				1807B1161DEC66E500BDD5AE /* UI */,
 				187E54B31DEC613500FACD0D /* AppDelegate */,
@@ -97,6 +104,8 @@
 		187E54B21DEC611900FACD0D /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				2E9375681DEC698000046CA7 /* ServiceModel.h */,
+				2E9375691DEC698000046CA7 /* ServiceModel.m */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -108,6 +117,15 @@
 				187E549F1DEC603300FACD0D /* AppDelegate.m */,
 			);
 			name = AppDelegate;
+			sourceTree = "<group>";
+		};
+		2E93756B1DEC6B1600046CA7 /* API */ = {
+			isa = PBXGroup;
+			children = (
+				2E93756C1DEC6B8E00046CA7 /* APIClient.h */,
+				2E93756D1DEC6B8E00046CA7 /* APIClient.m */,
+			);
+			name = API;
 			sourceTree = "<group>";
 		};
 		7BAB46DAB2D0EFC58600EAF6 /* Pods */ = {
@@ -250,9 +268,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2E93756E1DEC6B8E00046CA7 /* APIClient.m in Sources */,
+				187E54A31DEC603300FACD0D /* ViewController.m in Sources */,
 				187E54A01DEC603300FACD0D /* AppDelegate.m in Sources */,
 				187E549D1DEC603300FACD0D /* main.m in Sources */,
-				1807B1191DEC674100BDD5AE /* ServicesTableViewController.m in Sources */,
+				2E93756A1DEC698000046CA7 /* ServiceModel.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
