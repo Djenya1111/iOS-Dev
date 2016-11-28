@@ -16,7 +16,7 @@
 #define DOCUMENTS [NSSearchPathForDirectoriesInDomains (NSDocumentDirectory, NSUserDomainMask, YES) lastObject]
 
 static NSString* const reuseIdentifier = @"studentCellIdentifier";
-static NSString* const kStudentDetailIdentifier = @"tableStudentIdentifier";
+static NSString* const kStudentDetailIdentifier = @"StudentDetail";
 
 @interface StudentsTableViewController ()<SWTableViewCellDelegate>
 @property (nonatomic, strong) NSMutableArray<StudentModel*>* studentArray;
@@ -128,10 +128,6 @@ static NSString* const kStudentDetailIdentifier = @"tableStudentIdentifier";
     
 }
 
-- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
-    [self performSegueWithIdentifier:kStudentDetailIdentifier sender:nil];
-}
-
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
     
     
@@ -204,13 +200,12 @@ static NSString* const kStudentDetailIdentifier = @"tableStudentIdentifier";
 
 - (void)swipeableTableViewCell:(SWTableViewCell *)cell didTriggerRightUtilityButtonWithIndex:(NSInteger)index {
     switch (index) {
-        case 0:{
-                        break;
-        }
+        case 0:
+            NSLog(@"More button was pressed");
+            break;
         case 1:
         {
-            NSIndexPath *indexPath = [self.tableView indexPathForCell:cell];
-            [self deleteStudentAtIndex:indexPath.row];
+            
             break;
         }
         default:

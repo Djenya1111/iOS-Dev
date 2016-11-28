@@ -411,7 +411,7 @@
                                 <rect key="frame" x="0.0" y="28" width="375" height="80"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="2zo-ua-ps1" id="7ze-NP-60E">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="79.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="79"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="LastName" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sGV-VX-Hru">
@@ -464,6 +464,7 @@
                                     <outlet property="studentsName" destination="AvT-Lr-Tp0" id="R7o-Kh-Ace"/>
                                     <outlet property="studentsPhoto" destination="Gnd-UY-dSF" id="qkb-DV-tXS"/>
                                     <outlet property="studentsSubject" destination="cUo-A0-2D5" id="iei-zy-jc8"/>
+                                    <segue destination="Ao0-Qd-sMC" kind="show" identifier="StudentDetail" id="a0z-PC-4OO"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -481,9 +482,6 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
-                    <connections>
-                        <segue destination="Ao0-Qd-sMC" kind="show" identifier="tableStudentIdentifier" id="Zse-WQ-0OU"/>
-                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XmN-hb-BSD" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -582,17 +580,17 @@
                                 <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Ipb-9L-RTp" id="DAy-dO-sZV">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Subject" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="r8w-bI-I2a">
-                                            <rect key="frame" x="46" y="11.5" width="58.5" height="20.5"/>
+                                            <rect key="frame" x="171" y="11.5" width="58.5" height="20.5"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Mark" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vAw-cc-Jin">
-                                            <rect key="frame" x="262" y="11.5" width="38.5" height="20.5"/>
+                                            <rect key="frame" x="731" y="11.5" width="38.5" height="20.5"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
