@@ -16,7 +16,7 @@
 #define DOCUMENTS [NSSearchPathForDirectoriesInDomains (NSDocumentDirectory, NSUserDomainMask, YES) lastObject]
 
 static NSString* const reuseIdentifier = @"studentCellIdentifier";
-static NSString* const kStudentDetailIdentifier = @"StudentDetail";
+static NSString* const kStudentDetailIdentifier = @"tableStudentDetail";
 
 @interface StudentsTableViewController ()<SWTableViewCellDelegate>
 @property (nonatomic, strong) NSMutableArray<StudentModel*>* studentArray;
@@ -128,6 +128,9 @@ static NSString* const kStudentDetailIdentifier = @"StudentDetail";
     
 }
 
+- (void) tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    [self performSegueWithIdentifier:kStudentDetailIdentifier sender:nil];
+}
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
     
     
@@ -180,6 +183,8 @@ static NSString* const kStudentDetailIdentifier = @"StudentDetail";
 
 #pragma mark - SWTableViewDelegate
 
+
+
 - (void)swipeableTableViewCell:(SWTableViewCell *)cell didTriggerLeftUtilityButtonWithIndex:(NSInteger)index {
     switch (index) {
         case 0:
@@ -201,10 +206,12 @@ static NSString* const kStudentDetailIdentifier = @"StudentDetail";
 - (void)swipeableTableViewCell:(SWTableViewCell *)cell didTriggerRightUtilityButtonWithIndex:(NSInteger)index {
     switch (index) {
         case 0:
-            NSLog(@"More button was pressed");
             break;
-        case 1:
-        {
+            
+        case 1: {
+            NSLog(@"More button was pressed");
+            NSIndexPath *indexPath = [self.tableView indexPathForCell:cell];
+            [self deleteStudentAtIndex:indexPath.row];
             
             break;
         }
@@ -212,7 +219,6 @@ static NSString* const kStudentDetailIdentifier = @"StudentDetail";
             break;
     }
 }
-
 
 
 //- (NSDictionary*) prepareMarkWithSubjects: (NSArray*) subject{
