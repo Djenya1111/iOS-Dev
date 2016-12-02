@@ -1,0 +1,476 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		2E03BBF21DB92F1400A25B03 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E03BBF11DB92F1400A25B03 /* main.m */; };
+		2E03BBF51DB92F1400A25B03 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E03BBF41DB92F1400A25B03 /* AppDelegate.m */; };
+		2E03BBF81DB92F1400A25B03 /* SignUpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E03BBF71DB92F1400A25B03 /* SignUpViewController.m */; };
+		2E03BBFB1DB92F1400A25B03 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2E03BBF91DB92F1400A25B03 /* Main.storyboard */; };
+		2E03BBFD1DB92F1400A25B03 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2E03BBFC1DB92F1400A25B03 /* Assets.xcassets */; };
+		2E03BC001DB92F1400A25B03 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2E03BBFE1DB92F1400A25B03 /* LaunchScreen.storyboard */; };
+		2E185AC91DBABAB500213459 /* SignInViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E185AC81DBABAB500213459 /* SignInViewController.m */; };
+		2E185ACC1DBABADF00213459 /* MenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E185ACB1DBABADF00213459 /* MenuViewController.m */; };
+		F4CFE14BB736174C1BBC06A6 /* libPods-Hav4i.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A829A84A33FCFAFD3D9EC88 /* libPods-Hav4i.a */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		2E03BBED1DB92F1400A25B03 /* Hav4i.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Hav4i.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		2E03BBF11DB92F1400A25B03 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		2E03BBF31DB92F1400A25B03 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		2E03BBF41DB92F1400A25B03 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		2E03BBF61DB92F1400A25B03 /* SignUpViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SignUpViewController.h; sourceTree = "<group>"; };
+		2E03BBF71DB92F1400A25B03 /* SignUpViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SignUpViewController.m; sourceTree = "<group>"; };
+		2E03BBFA1DB92F1400A25B03 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		2E03BBFC1DB92F1400A25B03 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		2E03BBFF1DB92F1400A25B03 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		2E03BC011DB92F1400A25B03 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2E185AC71DBABAB500213459 /* SignInViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SignInViewController.h; sourceTree = "<group>"; };
+		2E185AC81DBABAB500213459 /* SignInViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SignInViewController.m; sourceTree = "<group>"; };
+		2E185ACA1DBABADF00213459 /* MenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MenuViewController.h; sourceTree = "<group>"; };
+		2E185ACB1DBABADF00213459 /* MenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MenuViewController.m; sourceTree = "<group>"; };
+		2E2212D81DEFC960009D500F /* Hav4i.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Hav4i.entitlements; sourceTree = "<group>"; };
+		7A829A84A33FCFAFD3D9EC88 /* libPods-Hav4i.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Hav4i.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		EAAFCD617A1F128D5936ED24 /* Pods-Hav4i.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Hav4i.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Hav4i/Pods-Hav4i.debug.xcconfig"; sourceTree = "<group>"; };
+		F47DEA6A1BCFB4A27446CDB7 /* Pods-Hav4i.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Hav4i.release.xcconfig"; path = "Pods/Target Support Files/Pods-Hav4i/Pods-Hav4i.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		2E03BBEA1DB92F1400A25B03 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F4CFE14BB736174C1BBC06A6 /* libPods-Hav4i.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		2E03BBE41DB92F1400A25B03 = {
+			isa = PBXGroup;
+			children = (
+				2E03BBEF1DB92F1400A25B03 /* Hav4i */,
+				2E03BBEE1DB92F1400A25B03 /* Products */,
+				D8B5FD41F1D1DAE2A4AC327E /* Pods */,
+				F812B87F00EC59B57513A9A7 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		2E03BBEE1DB92F1400A25B03 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				2E03BBED1DB92F1400A25B03 /* Hav4i.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		2E03BBEF1DB92F1400A25B03 /* Hav4i */ = {
+			isa = PBXGroup;
+			children = (
+				2E2212D81DEFC960009D500F /* Hav4i.entitlements */,
+				2E03BC071DB92F4E00A25B03 /* App Delegate */,
+				2E03BC081DB92F5E00A25B03 /* Controller */,
+				2E03BBF91DB92F1400A25B03 /* Main.storyboard */,
+				2E03BBFC1DB92F1400A25B03 /* Assets.xcassets */,
+				2E03BBFE1DB92F1400A25B03 /* LaunchScreen.storyboard */,
+				2E03BC011DB92F1400A25B03 /* Info.plist */,
+				2E03BBF01DB92F1400A25B03 /* Supporting Files */,
+			);
+			path = Hav4i;
+			sourceTree = "<group>";
+		};
+		2E03BBF01DB92F1400A25B03 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				2E03BBF11DB92F1400A25B03 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		2E03BC071DB92F4E00A25B03 /* App Delegate */ = {
+			isa = PBXGroup;
+			children = (
+				2E03BBF31DB92F1400A25B03 /* AppDelegate.h */,
+				2E03BBF41DB92F1400A25B03 /* AppDelegate.m */,
+			);
+			name = "App Delegate";
+			sourceTree = "<group>";
+		};
+		2E03BC081DB92F5E00A25B03 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				2E185ACF1DBABB1800213459 /* SIGN UP */,
+				2E185ACE1DBABAFC00213459 /* SIGN IN */,
+				2E185ACD1DBABAEA00213459 /* Menu */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		2E185ACD1DBABAEA00213459 /* Menu */ = {
+			isa = PBXGroup;
+			children = (
+				2E185ACA1DBABADF00213459 /* MenuViewController.h */,
+				2E185ACB1DBABADF00213459 /* MenuViewController.m */,
+			);
+			name = Menu;
+			sourceTree = "<group>";
+		};
+		2E185ACE1DBABAFC00213459 /* SIGN IN */ = {
+			isa = PBXGroup;
+			children = (
+				2E185AC71DBABAB500213459 /* SignInViewController.h */,
+				2E185AC81DBABAB500213459 /* SignInViewController.m */,
+			);
+			name = "SIGN IN";
+			sourceTree = "<group>";
+		};
+		2E185ACF1DBABB1800213459 /* SIGN UP */ = {
+			isa = PBXGroup;
+			children = (
+				2E03BBF61DB92F1400A25B03 /* SignUpViewController.h */,
+				2E03BBF71DB92F1400A25B03 /* SignUpViewController.m */,
+			);
+			name = "SIGN UP";
+			sourceTree = "<group>";
+		};
+		D8B5FD41F1D1DAE2A4AC327E /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				EAAFCD617A1F128D5936ED24 /* Pods-Hav4i.debug.xcconfig */,
+				F47DEA6A1BCFB4A27446CDB7 /* Pods-Hav4i.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		F812B87F00EC59B57513A9A7 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				7A829A84A33FCFAFD3D9EC88 /* libPods-Hav4i.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		2E03BBEC1DB92F1400A25B03 /* Hav4i */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2E03BC041DB92F1400A25B03 /* Build configuration list for PBXNativeTarget "Hav4i" */;
+			buildPhases = (
+				03D3B67321DB1BEB5BA83C2B /* [CP] Check Pods Manifest.lock */,
+				2E03BBE91DB92F1400A25B03 /* Sources */,
+				2E03BBEA1DB92F1400A25B03 /* Frameworks */,
+				2E03BBEB1DB92F1400A25B03 /* Resources */,
+				D2E47247BBCE9BDA45B3721E /* [CP] Embed Pods Frameworks */,
+				BF80E8B3A4C65E558D9689AA /* [CP] Copy Pods Resources */,
+				2E185AD01DBAC5CA00213459 /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Hav4i;
+			productName = Hav4i;
+			productReference = 2E03BBED1DB92F1400A25B03 /* Hav4i.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		2E03BBE51DB92F1400A25B03 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0810;
+				ORGANIZATIONNAME = "Avaz Abdrasulov";
+				TargetAttributes = {
+					2E03BBEC1DB92F1400A25B03 = {
+						CreatedOnToolsVersion = 8.0;
+						DevelopmentTeam = AWXA559AVD;
+						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.Keychain = {
+								enabled = 1;
+							};
+						};
+					};
+				};
+			};
+			buildConfigurationList = 2E03BBE81DB92F1400A25B03 /* Build configuration list for PBXProject "Hav4i" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 2E03BBE41DB92F1400A25B03;
+			productRefGroup = 2E03BBEE1DB92F1400A25B03 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				2E03BBEC1DB92F1400A25B03 /* Hav4i */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		2E03BBEB1DB92F1400A25B03 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2E03BC001DB92F1400A25B03 /* LaunchScreen.storyboard in Resources */,
+				2E03BBFD1DB92F1400A25B03 /* Assets.xcassets in Resources */,
+				2E03BBFB1DB92F1400A25B03 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		03D3B67321DB1BEB5BA83C2B /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		2E185AD01DBAC5CA00213459 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Fabric/run\" 4fd5d96ea54938bd1c049127ecdff93997b6b257 b84eeb009235ae756fabd0155c9517e94ef1df14609b4b5dadb84e6ce037afba";
+		};
+		BF80E8B3A4C65E558D9689AA /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Hav4i/Pods-Hav4i-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D2E47247BBCE9BDA45B3721E /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Hav4i/Pods-Hav4i-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		2E03BBE91DB92F1400A25B03 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2E185AC91DBABAB500213459 /* SignInViewController.m in Sources */,
+				2E03BBF81DB92F1400A25B03 /* SignUpViewController.m in Sources */,
+				2E03BBF51DB92F1400A25B03 /* AppDelegate.m in Sources */,
+				2E03BBF21DB92F1400A25B03 /* main.m in Sources */,
+				2E185ACC1DBABADF00213459 /* MenuViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		2E03BBF91DB92F1400A25B03 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2E03BBFA1DB92F1400A25B03 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		2E03BBFE1DB92F1400A25B03 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2E03BBFF1DB92F1400A25B03 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		2E03BC021DB92F1400A25B03 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		2E03BC031DB92F1400A25B03 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		2E03BC051DB92F1400A25B03 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = EAAFCD617A1F128D5936ED24 /* Pods-Hav4i.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Hav4i/Hav4i.entitlements;
+				DEVELOPMENT_TEAM = AWXA559AVD;
+				INFOPLIST_FILE = Hav4i/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.abdrasulov.Hav4i;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		2E03BC061DB92F1400A25B03 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F47DEA6A1BCFB4A27446CDB7 /* Pods-Hav4i.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Hav4i/Hav4i.entitlements;
+				DEVELOPMENT_TEAM = AWXA559AVD;
+				INFOPLIST_FILE = Hav4i/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.abdrasulov.Hav4i;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2E03BBE81DB92F1400A25B03 /* Build configuration list for PBXProject "Hav4i" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2E03BC021DB92F1400A25B03 /* Debug */,
+				2E03BC031DB92F1400A25B03 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2E03BC041DB92F1400A25B03 /* Build configuration list for PBXNativeTarget "Hav4i" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2E03BC051DB92F1400A25B03 /* Debug */,
+				2E03BC061DB92F1400A25B03 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 2E03BBE51DB92F1400A25B03 /* Project object */;
+}
